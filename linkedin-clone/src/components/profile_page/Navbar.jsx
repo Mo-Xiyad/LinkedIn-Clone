@@ -1,5 +1,5 @@
 import React from 'react';
-import HearedIcons from './HearedIcons';
+import HeaderIcons from './HearedIcons';
 import SearchIcon from '@mui/icons-material/Search';
 import HomeIcon from '@mui/icons-material/Home';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
@@ -19,12 +19,14 @@ export default function Navbar() {
 			</div>
 
 			<div className="header_right">
-				<HearedIcons title="Home" Icon={HomeIcon} />
-				<HearedIcons title="My Network" Icon={PeopleAltIcon} />
-				<HearedIcons title="Jobs" Icon={BusinessCenterIcon} />
-				<HearedIcons title="Jobs" Icon={SmsIcon} />
-				<HearedIcons title="Messaging" Icon={NotificationsIcon} />
-				<HearedIcons
+				<HeaderIcons title="Home" Icon={HomeIcon} />
+				<HeaderIcons title="My Network" Icon={PeopleAltIcon} />
+				<HeaderIcons title="Jobs" Icon={BusinessCenterIcon} />
+				<HeaderIcons title="Jobs" Icon={SmsIcon} />
+				<HeaderIcons title="Messaging" Icon={NotificationsIcon} />
+				<HeaderIcons title="Messaging" Icon={AppsIcon} />
+
+				<HeaderIcons
 					avatar="https://www.g20.org/wp-content/uploads/2021/01/people.jpg"
 					title="ME"
 				/>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Avatar, Icon } from '@material-ui/core';
-export default function HearedIcons({ avatar, title, Icon }) {
+export default function HeaderIcons({ avatar, title, Icon }) {
 	return (
 		<div className="hearedicons">
 			{Icon && <Icon className="heared_icons" src={Icon} />}
