@@ -14,4 +14,8 @@
 	font-weight: 400;
 }
 .heared_icons {
+	object-fit: contain;
+	height: 25px !important;
+	width: 25px !important;
+
 }
