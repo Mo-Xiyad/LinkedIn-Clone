@@ -1,13 +1,19 @@
-import { Col, Jumbotron, Row } from "react-bootstrap";
+import { Col, Jumbotron, Row, Spinner } from "react-bootstrap";
 
-const Headerinfo = () => {
+const Headerinfo = ({ mydata, isLoading }) => {
   return (
     <Jumbotron>
-      <p class="mb-0">
-        Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis
-        consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed
-        consectetur.
-      </p>
+      {mydata && isLoading && (
+        <div className="text-center">
+          <Spinner animation="border" variant="success" />
+        </div>
+      )}
+      {mydata && (
+        <div>
+          <p>{mydata.name}</p>
+          <img clasName="" src={mydata.image} />
+        </div>
+      )}
     </Jumbotron>
   );
 };

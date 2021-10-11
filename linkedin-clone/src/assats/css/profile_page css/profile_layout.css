@@ -18,23 +18,9 @@
 }
 .content-main {
   justify-content: space-evenly;
-  /* margin: 0 44px 0 85px; */
   margin: 0 28px 0 89px;
-  /* float: right;
-  align-content: normal;
-  align-items: normal;
-  justify-items: normal;
-  column-gap: 0.4rem;
-  grid-area: content;
-  grid-row-start: content;
-  grid-column-start: content;
-  grid-row-end: content;
-  grid-column-end: content;
-  grid-template-rows: auto;
-  row-gap: 0.4rem; */
 }
 
 .aside {
   margin: 0 58px 0px -4px;
-  /* margin: 0 44px 0px 6px; */
 }
