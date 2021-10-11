@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './assats/css/profile_page css/Navbar.css';
+import './assats/css/profile_page css/HearedIcons.css';
 import Navbar from './components/profile_page/Navbar';
 
 function App() {
