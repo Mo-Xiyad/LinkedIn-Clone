@@ -3,6 +3,11 @@
     display: none;
   }
 }
+/* @media only screen and (max-width: 570px) {
+  .content {
+    display: none;
+  }
+} */
 
 .content {
   width: 70%;
@@ -13,7 +18,8 @@
 }
 .content-main {
   justify-content: space-evenly;
-  margin: 0 44px 0 85px;
+  /* margin: 0 44px 0 85px; */
+  margin: 0 28px 0 89px;
   /* float: right;
   align-content: normal;
   align-items: normal;
@@ -29,5 +35,6 @@
 }
 
 .aside {
-  margin: 0 50px 0px -1px;
+  margin: 0 58px 0px -4px;
+  /* margin: 0 44px 0px 6px; */
 }

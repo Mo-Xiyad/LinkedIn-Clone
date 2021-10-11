@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Col, Row } from "react-bootstrap";
 
-class Profilelayout extends Component {
+class Outterlayout extends Component {
   render() {
     return (
       <main className="content" role="main">
@@ -11,4 +11,4 @@ class Profilelayout extends Component {
   }
 }
 
-export default Profilelayout;
+export default Outterlayout;
