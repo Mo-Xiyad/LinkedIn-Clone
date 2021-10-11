@@ -1,11 +1,11 @@
 import React from 'react';
 import { Avatar, Icon } from '@material-ui/core';
-export default function HearedIcons({ avatar, title, icon }) {
+export default function HearedIcons({ avatar, title, Icon }) {
 	return (
 		<div className="hearedicons">
-			{icon && <Icon className="heared_icons" src={icon} />}
-			{avatar && <Avatar className="heared_icons" src={avatar} />}
+			{Icon && <Icon className="heared_icons" src={Icon} />}
 			<h5 className="heared_title">{title}</h5>
+			{avatar && <Avatar className="heared_icons" src={avatar} />}
 		</div>
 	);
 }
