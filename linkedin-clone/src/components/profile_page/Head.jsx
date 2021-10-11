@@ -5,7 +5,7 @@ import Aside from "./Aside";
 const Head = () => {
   return (
     <Profilelayout>
-      <div className=" col-sm-6 col-md-8 col-lg-8">
+      <div className=" col-sm-6 col-md-7 col-lg-8">
         <Jumbotron>
           <p class="mb-0">
             Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis

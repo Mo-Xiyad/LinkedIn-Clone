@@ -1,7 +1,7 @@
 const Aside = () => {
   return (
-    <aside class="col-sm-4 col-md-3 col-lg-3">
-      <div class="p-4 mb-3 bg-light rounded">
+    <aside class="col-sm-4 col-md-3 col-lg-4">
+      <div class="p-4 mb-3 bg-light rounded aside">
         <h4 class="font-italic">About</h4>
         <p class="mb-0">
           Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis
@@ -10,7 +10,7 @@ const Aside = () => {
         </p>
       </div>
 
-      <div class="p-4 mb-3 bg-light rounded">
+      <div class="p-4 mb-3 bg-light rounded aside">
         <h4 class="font-italic">About</h4>
         <p class="mb-0">
           Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis
