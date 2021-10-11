@@ -1,9 +1,9 @@
 # LinkedIn-Clone
 
-### Project Guidlines 
+### Project Guidlines
 
 #### Commits
 
 #### Project folder Hierarchy
 
-<Image align="center" src="https://photos.app.goo.gl/bpJT7KcE32xMFjD67"/>
+<Image align="center" src="./fileStructure.png"/>
