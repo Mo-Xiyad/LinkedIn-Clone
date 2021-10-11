@@ -12,27 +12,28 @@ export default function Navbar() {
 	return (
 		<div className="header">
 			<div className="header_left">
-				<img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />
+				<img
+					className="linkedinlogo"
+					src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+				/>
+
 				<div className="header_search">
 					<SearchIcon className="header_search_icon" />
 					<input type="text" name="" placeholder="Search" id="" />
 				</div>
 			</div>
 
-			<div className=" mdheader_right">
+			<div className="header_right">
 				<HeaderIcons title="Home" Icon={HomeIcon} />
 				<HeaderIcons title="My Network" Icon={PeopleAltIcon} />
 				<HeaderIcons title="Jobs" Icon={BusinessCenterIcon} />
 				<HeaderIcons title="Messaging" Icon={SmsIcon} />
 				<HeaderIcons title="Notifications" Icon={NotificationsIcon} />
+				<HeaderIcons title="Work" Icon={AppsIcon} />
 
 				<HeaderIcons
 					avatar="https://www.g20.org/wp-content/uploads/2021/01/people.jpg"
 					title="ME"
-					Icon={ArrowDropDownIcon}
-				/>
-				<HeaderIcons
-					title="Work"
 					Icon={ArrowDropDownIcon}
 				/>
 			</div>
