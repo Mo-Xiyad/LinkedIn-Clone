@@ -19,7 +19,7 @@ export default function Navbar() {
 				</div>
 			</div>
 
-			<div className="header_right">
+			<div className=" mdheader_right">
 				<HeaderIcons title="Home" Icon={HomeIcon} />
 				<HeaderIcons title="My Network" Icon={PeopleAltIcon} />
 				<HeaderIcons title="Jobs" Icon={BusinessCenterIcon} />
