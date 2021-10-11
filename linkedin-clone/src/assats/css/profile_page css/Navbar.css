@@ -1,7 +1,6 @@
 .header {
 	background: rgb(255, 255, 255);
 	height: 55px;
-	color: tomato;
 	display: flex;
 }
 .header_left {
@@ -14,6 +13,7 @@
 	margin-right: 10px;
 }
 .header_right {
+	display: flex;
 }
 .header_search {
 	margin: 11px 0px 0px 10px;
