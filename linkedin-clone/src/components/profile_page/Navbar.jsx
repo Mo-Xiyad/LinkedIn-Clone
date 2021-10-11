@@ -8,10 +8,15 @@ export default function Navbar() {
 			<div className="header_left">
 				<img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />
 				<div className="header_search">
-					<img src="HomeIcon" width="20px" alt="" />
+					<img
+						src="https://www.pngfind.com/pngs/m/133-1338299_scholarly-search-icon-small-png-transparent-png.png"
+						width="20px"
+						alt=""
+					/>
 					<input type="text" name="" placeholder="Search" id="" />
 				</div>
 			</div>
+
 			<div className="header_right">
 				<HearedIcons
 					title="Home"
