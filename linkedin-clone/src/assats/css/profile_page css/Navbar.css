@@ -27,6 +27,9 @@
 	background-color: #eef3f8;
 	border-radius: 6px;
 }
+.header_search_img {
+	margin: 5px;
+}
 .header_search > input {
 	margin-left: 5px;
 	outline: none;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Avatar, Icon } from '@material-ui/core';
 export default function HearedIcons({ avatar, title, icon }) {
 	return (
