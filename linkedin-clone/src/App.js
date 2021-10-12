@@ -9,13 +9,17 @@ import "./assats/css/home_page css/Homepage.css";
 import Navbar from "./components/profile_page/Navbar";
 import HomePage from "./components/home_page/Homepage";
 import InnerLayout from "./components/profile_page/InnerLayout";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <InnerLayout />;
-      <HomePage />
+      <Router>
+        <Navbar />
+        <Route path="/" exact={true} component={HomePage} />
+        <Route path="/profile/:id" exact={true} component={InnerLayout} />
+      </Router>
     </div>
   );
 }
