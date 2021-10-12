@@ -11,6 +11,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { withRouter } from "react-router";
 import Melogo from "./Melogo";
 import { Link } from "react-router-dom";
+
 function Navbar({ selectedUser }) {
   return (
     <div className="header">
@@ -27,14 +28,16 @@ function Navbar({ selectedUser }) {
       </div>
 
       <div className="header_right">
-        <HeaderIcons title="Home" Icon={HomeIcon} />
+        <HeaderIcons to={"/"} title="Home" Icon={HomeIcon} />
         <HeaderIcons title="My Network" Icon={PeopleAltIcon} />
         <HeaderIcons title="Jobs" Icon={BusinessCenterIcon} />
         <HeaderIcons title="Messaging" Icon={SmsIcon} />
         <HeaderIcons title="Notifications" Icon={NotificationsIcon} />
-        <Link to={"/profile/" + selectedUser}>
-          <Melogo title="ME" />
-        </Link>
+        {selectedUser && (
+          <Link to={"/profile/" + selectedUser}>
+            <Melogo title="ME" />
+          </Link>
+        )}
 
         <HeaderIcons title="Work" Icon={AppsIcon} />
         <div className="notif_text">
