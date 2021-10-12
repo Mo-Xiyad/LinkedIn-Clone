@@ -1,11 +1,18 @@
 import { Link } from "@material-ui/core";
-import { Button, Image, Col, Jumbotron, Row, Spinner } from "react-bootstrap";
+import {
+  ListGroup,
+  Button,
+  Image,
+  Col,
+  Jumbotron,
+  Row,
+  Spinner,
+} from "react-bootstrap";
 import "../../assats/css/profile_page css/headeinfo.css";
 import React, { useEffect, useState } from "react";
-
 import styled from "styled-components";
-// import "./styles.css";
-import MultiMenus from "./MultiMenus";
+
+import MultiMenus from "../../assats/js/MultiMenus";
 
 const Wrapper = styled.aside`
   background: #c52465cc;
@@ -114,7 +121,9 @@ const menus = [
 ];
 
 const Headerinfo = ({ mydata, isLoading }) => {
-  const [buttonclicked, setButtonclicked] = useState(false);
+  const [buttonOne, setButtonOne] = useState(false);
+  const [buttonTwo, setButtonTwo] = useState(false);
+  const [buttonThree, setButtonThree] = useState(false);
 
   return (
     <Jumbotron className="position-relative profile-heading-container">
@@ -177,21 +186,63 @@ const Headerinfo = ({ mydata, isLoading }) => {
               </p>
               <div className="d-flex">
                 <div className="btn-one">
-                  <Button>Open to</Button>{" "}
+                  <Button onClick={() => setButtonOne(!buttonOne)}>
+                    Open to
+                  </Button>{" "}
                 </div>
+                {buttonOne === true ? (
+                  <div className="btn-one-drowpdown">
+                    <div className="text-muted">
+                      <div className="">
+                        <a href="#Hiring">
+                          <p className="mb-1">
+                            <strong>Hiring</strong>
+                          </p>
+                          <span className="text-muted">
+                            Share that you’re hiring and attract qualified
+                            candidates
+                          </span>
+                        </a>
+                      </div>
+                      <div className="mb-4 mt-2">
+                        <a href="#Providing-services">
+                          <p className="mb-1">
+                            <strong>Providing services</strong>
+                          </p>
+                          <span className="text-muted">
+                            Showcase services you offer so new clients can
+                            discover you
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ) : null}
                 <div className="mx-2 btn-two position-relative">
-                  <Button onClick={() => setButtonclicked(!buttonclicked)}>
+                  <Button onClick={() => setButtonTwo(!buttonTwo)}>
                     Add section
                   </Button>{" "}
                 </div>
-                {buttonclicked === true ? (
+                {buttonTwo === true ? (
                   <div className="btn-two-drowpdown">
                     <MultiMenus menus={menus} />
                   </div>
                 ) : null}
+
                 <div className="btn-three">
-                  <Button>More</Button>{" "}
+                  <Button onClick={() => setButtonThree(!buttonThree)}>
+                    More
+                  </Button>{" "}
                 </div>
+                {buttonThree === true ? (
+                  <div className="btn-three-drowpdown">
+                    <div className="text-muted">
+                      <p>Share profile in a message</p>
+                      <p>Save to PDF</p>
+                      <p>Build a resume</p>
+                    </div>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
