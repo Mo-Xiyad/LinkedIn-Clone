@@ -1,6 +1,45 @@
 .feeds {
 	flex: 1;
-	background-color: darkcyan;
 	margin-right: 15px;
 	margin-left: 15px;
+}
+
+.posting_area {
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-evenly;
+	background-color: rgb(255, 255, 255);
+	color: gray;
+	padding: 10px;
+	padding-left: 15px;
+}
+.posting_area > form {
+	display: flex;
+	width: 100%;
+	border: 1px solid gray;
+	border-radius: 20px;
+}
+.posting_area > form > input {
+	flex: 1;
+	border: none;
+	outline-width: 0;
+	font-weight: 400;
+	margin: 10px;
+}
+.posting_area > form > button {
+	display: none;
+}
+.postfeed {
+	background-color: rgb(97, 97, 97);
+	margin-top: 20px;
+	border-radius: 10px;
+}
+
+.posting_area > .headericons_avatar > .header_title_container {
+	display: none;
+}
+.posting_area > .headericons_avatar > img {
+	width: 45px !important;
+	height: 45px !important;
+	margin-right: 10px;
 }
