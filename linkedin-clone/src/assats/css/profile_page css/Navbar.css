@@ -34,12 +34,15 @@
 }
 .notif_text {
   margin-right: 10px;
-  margin-top: 25px;
+  margin-top: -3px;
   padding-bottom: -25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0px;
+  color: #5d3b09;
+  line-height: 18px;
+  font-size: 12px;
 }
 .header_search > input {
   margin-left: 5px;

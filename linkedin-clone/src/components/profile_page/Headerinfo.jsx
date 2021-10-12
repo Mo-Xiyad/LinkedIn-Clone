@@ -136,7 +136,7 @@ const Headerinfo = ({ mydata, isLoading }) => {
         <div>
           <div>
             <Image
-              src="https://lh3.googleusercontent.com/proxy/crqmxY-fNawCC0C1IY4szfxKrPKVcVgfZ2BKhXmcZMwvbq-K_yRO1VlXn5_Zql8CoZfZMyA0PRc_QgFKmBxnnwjv6TpE5tOyGjt7QIro3YPmYG1yvs0"
+              src="https://ischool.uw.edu/sites/default/files/2017-08/george_header.jpg"
               className="profile-banner"
             />
           </div>

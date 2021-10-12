@@ -41,8 +41,8 @@ function Navbar({ selectedUser }) {
 
         <HeaderIcons title="Work" Icon={AppsIcon} />
         <div className="notif_text">
-          <p>Try Preminum for </p>
-          <p>Free</p>
+          <p className="mb-0">Try Preminum for </p>
+          <p className="mb-0">Free</p>
         </div>
       </div>
     </div>
