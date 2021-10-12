@@ -2,13 +2,15 @@
 	flex: 1;
 	margin-right: 15px;
 	margin-left: 15px;
+	margin-top: 20px;
 }
 
 .feeding {
-	background-color: rgb(117, 71, 71);
+	background-color: rgb(255, 255, 255);
 	border-radius: 10px;
 }
 .posting_area {
+	margin-top: 5px;
 	display: flex;
 	justify-content: space-evenly;
 	color: gray;

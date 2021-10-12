@@ -5,6 +5,7 @@ import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import ArticleIcon from '@mui/icons-material/Article';
+import Post from './Post';
 export default function Feed() {
 	return (
 		<div className="feeds">
@@ -17,15 +18,19 @@ export default function Feed() {
 					</form>
 				</div>
 				<div className="postoption">
-					<Postinput color="blue" Icon={AddPhotoAlternateIcon} title="Photo" />
-					<Postinput color="green" Icon={YouTubeIcon} title="Video" />
-					<Postinput color="orange" Icon={DateRangeIcon} title="Event" />
-					<Postinput color="red" Icon={ArticleIcon} title="Write artice" />
+					<Postinput
+						color="#70B5F9"
+						Icon={AddPhotoAlternateIcon}
+						title="Photo"
+					/>
+					<Postinput color="#7FC15E" Icon={YouTubeIcon} title="Video" />
+					<Postinput color="#E7A33E" Icon={DateRangeIcon} title="Event" />
+					<Postinput color="#FC9295" Icon={ArticleIcon} title="Write artice" />
 				</div>
 			</div>
 
 			<div className="postfeed">
-				<h2>222</h2>
+				<Post />
 			</div>
 		</div>
 	);

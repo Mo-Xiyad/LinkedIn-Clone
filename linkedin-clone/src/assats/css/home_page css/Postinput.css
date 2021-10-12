@@ -2,6 +2,8 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	cursor: pointer;
+	padding: 0px 15px 0px 15px;
 }
 .input_type > p {
 	padding-top: 17px;
@@ -10,4 +12,9 @@
 
 .input_type > svg {
 	margin-right: 8px;
+}
+
+.input_type:hover {
+	background-color: whitesmoke;
+	border-radius: 10px;
 }
