@@ -95,3 +95,17 @@ a > .profile-img {
   outline-offset: -2px !important;
   background-color: #eeeeee !important;
 }
+
+.btn-two-drowpdown {
+  position: absolute;
+  top: 77px;
+  left: 94px;
+  width: 50%;
+  /* text-overflow: inherit; */
+  background-color: white;
+  border: 1px solid #ededed;
+  border-radius: 9px;
+}
+.btn-two-drowpdown li {
+  border-bottom: 1px solid #ededed;
+}

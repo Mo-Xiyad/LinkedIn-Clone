@@ -1,8 +1,121 @@
 import { Link } from "@material-ui/core";
 import { Button, Image, Col, Jumbotron, Row, Spinner } from "react-bootstrap";
 import "../../assats/css/profile_page css/headeinfo.css";
+import React, { useEffect, useState } from "react";
+
+import styled from "styled-components";
+// import "./styles.css";
+import MultiMenus from "./MultiMenus";
+
+const Wrapper = styled.aside`
+  background: #c52465cc;
+  width: 300px;
+`;
+
+const menus = [
+  {
+    label: "Intro",
+    submenu: [
+      {
+        label:
+          "Mo, your Intro is looking good! Check out other sections you can add to your profile",
+      },
+    ],
+  },
+  {
+    label: "About",
+    submenu: [
+      {
+        label: "Looking good, Mo This section is complete.",
+      },
+    ],
+  },
+  {
+    label: "Featured",
+    submenu: [
+      {
+        label: "Posts",
+      },
+      {
+        label: "Articles",
+      },
+      { label: "Links" },
+      {
+        label: "Media",
+      },
+    ],
+  },
+  {
+    label: "Background",
+    submenu: [
+      {
+        label: "Work experience",
+      },
+      {
+        label: "Education",
+      },
+      { label: "Licenses & certifications" },
+      {
+        label: "Volunteer experience",
+      },
+    ],
+  },
+  {
+    label: "Skills",
+    submenu: [
+      {
+        label: "skills",
+      },
+    ],
+  },
+  {
+    label: "Accomplishments",
+    submenu: [
+      {
+        label: "Publications",
+      },
+      {
+        label: "Patents",
+      },
+      { label: "Courses" },
+      {
+        label: "Honors & awards",
+      },
+      {
+        label: "Test scores",
+      },
+      {
+        label: "Languages",
+      },
+      {
+        label: "Organizations",
+      },
+      {
+        label: "Causes",
+      },
+    ],
+  },
+  {
+    label: "Additional information",
+    submenu: [
+      {
+        label: "Request a recommendation",
+      },
+    ],
+  },
+  {
+    label: "Supported languages",
+    submenu: [
+      {
+        label: "Add profile in another language",
+      },
+    ],
+  },
+];
 
 const Headerinfo = ({ mydata, isLoading }) => {
+  const [buttonclicked, setButtonclicked] = useState(false);
+
   return (
     <Jumbotron className="position-relative profile-heading-container">
       {mydata && isLoading && (
@@ -56,7 +169,7 @@ const Headerinfo = ({ mydata, isLoading }) => {
                 </h3>
               </div>
             </Row>
-            <div className="user-connetions">
+            <div className="user-connetions position-relative">
               <p className="pt-2">
                 <strong className="text-muted">
                   <Link>500+ connections</Link>
@@ -66,17 +179,24 @@ const Headerinfo = ({ mydata, isLoading }) => {
                 <div className="btn-one">
                   <Button>Open to</Button>{" "}
                 </div>
-                <div className="mx-2 btn-two">
-                  <Button>Add section</Button>{" "}
+                <div className="mx-2 btn-two position-relative">
+                  <Button onClick={() => setButtonclicked(!buttonclicked)}>
+                    Add section
+                  </Button>{" "}
                 </div>
+                {buttonclicked === true ? (
+                  <div className="btn-two-drowpdown">
+                    <MultiMenus menus={menus} />
+                  </div>
+                ) : null}
                 <div className="btn-three">
                   <Button>More</Button>{" "}
                 </div>
-                {/* <Button>Open to</Button> <Button>Add section</Button>{" "}
-                <Button>More</Button>{" "} */}
               </div>
             </div>
           </div>
+          {/* <Wrapper> */}
+          {/* </Wrapper> */}
         </div>
       )}
     </Jumbotron>
