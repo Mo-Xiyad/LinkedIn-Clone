@@ -1,0 +1,13 @@
+.input_type {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.input_type > p {
+	padding-top: 17px;
+	font-weight: 400;
+}
+
+.input_type > svg {
+	margin-right: 8px;
+}

@@ -4,11 +4,13 @@
 	margin-left: 15px;
 }
 
-.posting_area {
+.feeding {
+	background-color: rgb(117, 71, 71);
 	border-radius: 10px;
+}
+.posting_area {
 	display: flex;
 	justify-content: space-evenly;
-	background-color: rgb(255, 255, 255);
 	color: gray;
 	padding: 10px;
 	padding-left: 15px;
@@ -42,4 +44,9 @@
 	width: 45px !important;
 	height: 45px !important;
 	margin-right: 10px;
+}
+.postoption {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
 }
