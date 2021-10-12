@@ -95,3 +95,52 @@ a > .profile-img {
   outline-offset: -2px !important;
   background-color: #eeeeee !important;
 }
+
+.btn-two-drowpdown {
+  position: absolute;
+  top: 80px;
+  left: 94px;
+  width: 50%;
+  background-color: white;
+  border: 1px solid #ededed;
+  border-radius: 9px;
+}
+.btn-two-drowpdown li {
+  border-bottom: 1px solid #ededed;
+}
+
+.btn-one-drowpdown {
+  position: absolute;
+  top: 80px;
+  left: -1px;
+  width: 40%;
+  background-color: white;
+  border: 1px solid #ededed;
+  border-radius: 9px;
+}
+.btn-one-drowpdown a:hover {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+.btn-one-drowpdown div > div:hover {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+.btn-one-drowpdown div > div {
+  padding: 22px 16px 1px 23px;
+  line-height: 19px;
+  text-decoration: none;
+}
+.btn-three-drowpdown {
+  position: absolute;
+  top: 80px;
+  left: 218px;
+  width: 40%;
+  background-color: white;
+  border: 1px solid #ededed;
+  border-radius: 9px;
+}
+.btn-three-drowpdown > div {
+  padding: 23px 16px 11px 23px;
+  line-height: 26px;
+}
