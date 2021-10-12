@@ -7,7 +7,7 @@ import SmsIcon from '@mui/icons-material/Sms';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import AppsIcon from '@mui/icons-material/Apps';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Melogo from './Melogo';
 export default function Navbar() {
 	return (
 		<div className="header">
@@ -30,12 +30,7 @@ export default function Navbar() {
 				<HeaderIcons title="Messaging" Icon={SmsIcon} />
 				<HeaderIcons title="Notifications" Icon={NotificationsIcon} />
 				<HeaderIcons title="Work" Icon={AppsIcon} />
-
-				<HeaderIcons
-					avatar="https://www.g20.org/wp-content/uploads/2021/01/people.jpg"
-					title="ME"
-					Icon={ArrowDropDownIcon}
-				/>
+				<Melogo title="ME" />
 			</div>
 		</div>
 	);

@@ -18,9 +18,4 @@
 	height: 25px !important;
 	width: 25px !important;
 }
-.headericons_avatar > img {
-	top: 0px;
-	object-fit: contain;
-	height: 10px !important;
-	width: 10px !important;
-}
+
