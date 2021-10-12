@@ -65,8 +65,11 @@ const MultiMenus = ({ menus }) => {
 
   const ListMenu = ({ dept, data, hasSubMenu, menuName, menuIndex }) => (
     <LI>
-      <Item dept={dept}>
-        <Label onClick={() => handleMenuClick(data)} className="text-muted">
+      <Item dept={dept} onClick={() => handleMenuClick(data)}>
+        <Label
+          onClick={() => handleArrowClick(menuName)}
+          className="text-muted"
+        >
           {data.label}{" "}
         </Label>
         {hasSubMenu && (
