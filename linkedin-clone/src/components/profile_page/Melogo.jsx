@@ -1,4 +1,5 @@
 import React from 'react';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 export default function Melogo({ title }) {
 	return (
@@ -7,7 +8,10 @@ export default function Melogo({ title }) {
 				src="http://highlinewest.com/wp/wp-content/uploads/2016/01/linkedin-profile-photos-vancouver-bc-amanda.jpg"
 				alt=""
 			/>
-			<h5 className="header_title">{title}</h5>
+			<div className="header_title_container">
+				<h6 className="header_title">{title}</h6>
+				<ArrowDropDownIcon />
+			</div>
 		</div>
 	);
 }
