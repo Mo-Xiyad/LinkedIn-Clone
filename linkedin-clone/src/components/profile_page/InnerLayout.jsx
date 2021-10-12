@@ -5,7 +5,7 @@ import Headerinfo from "./Headerinfo";
 import { fetchData } from "../../assats/js";
 import { useState, useEffect } from "react";
 
-const InnerLayout = () => {
+const InnerLayout = ({ setSelectedUser }) => {
   const [mydata, setMydat] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -19,6 +19,9 @@ const InnerLayout = () => {
     getData();
     // console.log(mydata);
   }, []);
+  if (mydata !== undefined || mydata !== null) {
+    setSelectedUser(mydata._id);
+  }
 
   return (
     <Outterlayout>

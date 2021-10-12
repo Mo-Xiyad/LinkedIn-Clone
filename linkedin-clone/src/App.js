@@ -11,14 +11,26 @@ import HomePage from "./components/home_page/Homepage";
 import InnerLayout from "./components/profile_page/InnerLayout";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-
 function App() {
+  const [selectedUser, setSelectedUser] = useState();
+  console.log(selectedUser);
+  console.log("selectedUser");
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        <Navbar selectedUser={selectedUser} />
         <Route path="/" exact={true} component={HomePage} />
-        <Route path="/profile/:id" exact={true} component={InnerLayout} />
+        <Route
+          path="/profile/:userId"
+          exact={true}
+          render={({ routProps }) => (
+            <InnerLayout
+              {...routProps}
+              setSelectedUser={setSelectedUser}
+              selectedUser={selectedUser}
+            />
+          )}
+        />
       </Router>
     </div>
   );

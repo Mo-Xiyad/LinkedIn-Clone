@@ -9,7 +9,7 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import AppsIcon from "@mui/icons-material/Apps";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { withRouter } from "react-router";
-function Navbar() {
+function Navbar({ selectedUser }) {
   return (
     <div className="header">
       <div className="header_left">
@@ -36,7 +36,7 @@ function Navbar() {
           avatar="https://www.g20.org/wp-content/uploads/2021/01/people.jpg"
           title="ME"
           Icon={ArrowDropDownIcon}
-          to={"/profile/:id"}
+          to={"/profile/" + selectedUser}
         />
       </div>
     </div>
