@@ -29,8 +29,12 @@ export default function Navbar() {
 				<HeaderIcons title="Jobs" Icon={BusinessCenterIcon} />
 				<HeaderIcons title="Messaging" Icon={SmsIcon} />
 				<HeaderIcons title="Notifications" Icon={NotificationsIcon} />
-				<HeaderIcons title="Work" Icon={AppsIcon} />
 				<Melogo title="ME" />
+				<HeaderIcons title="Work" Icon={AppsIcon} />
+				<div className="notif_text">
+					<p>Try Preminum for </p>
+					<p>Free</p>
+				</div>
 			</div>
 		</div>
 	);

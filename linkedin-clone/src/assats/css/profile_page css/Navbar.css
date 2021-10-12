@@ -8,8 +8,10 @@
 	background: rgb(255, 255, 255);
 	height: 50px;
 	display: flex;
-	justify-content: space-evenly;
 	margin: 0%;
+	margin-left: 386px;
+	margin-right: 385px;
+	justify-content: space-between;
 }
 .header_left {
 	margin-left: 0px;
@@ -29,7 +31,15 @@
 	background-color: #eef3f8;
 	border-radius: 6px;
 }
-
+.notif_text {
+	margin-right: 10px;
+	margin-top: 25px;
+	padding-bottom: -25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0px;
+}
 .header_search > input {
 	margin-left: 5px;
 	outline: none;

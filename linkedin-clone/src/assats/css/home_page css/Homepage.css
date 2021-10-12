@@ -1,5 +1,21 @@
 .homepage {
 	display: flex;
 	margin-left: 386px;
-    margin-right: 402px;
+	margin-right: 385px;
+}
+
+/* .homepage > * {
+	flex-basis: 100%;
+} */
+
+.feeds {
+	flex-basis: 50%;
+}
+.wiges {
+	flex-basis: 29%;
+	margin-left: 19px;
+}
+.sidebar {
+	flex-basis: 21%;
+	margin-right: 19px;
 }
