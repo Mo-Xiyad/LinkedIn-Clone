@@ -31,7 +31,6 @@ export default function Feed() {
 
 			<div className="postfeed">
 				<Post />
-				<Post />
 			</div>
 		</div>
 	);
