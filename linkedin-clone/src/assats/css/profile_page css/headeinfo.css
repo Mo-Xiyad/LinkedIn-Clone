@@ -1,13 +1,23 @@
 body {
   background-color: #f3f2ef;
 }
+/* SIDE CONENT */
+
+.rounded {
+  border-radius: 10px !important;
+  border: 1px solid rgb(221, 220, 220);
+  background-color: #ffffff !important;
+}
+
+/* END SIDE CONTENT  */
+
 .profile-banner {
   position: absolute;
   width: 100%;
   height: auto;
   top: 0;
   left: 0px;
-  border-radius: 6px 6px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
 }
 .profile-img {
   width: 156px;
@@ -22,6 +32,8 @@ a > .profile-img {
 .profile-heading-container {
   background-color: white !important;
   padding: 1rem 2rem !important;
+  border: 1px solid rgb(221, 220, 220);
+  border-radius: 10px;
 }
 .profile-info {
   margin-top: 237px;

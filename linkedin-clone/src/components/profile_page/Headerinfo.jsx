@@ -246,8 +246,7 @@ const Headerinfo = ({ mydata, isLoading }) => {
               </div>
             </div>
           </div>
-          {/* <Wrapper> */}
-          {/* </Wrapper> */}
+          <div></div>
         </div>
       )}
     </Jumbotron>
