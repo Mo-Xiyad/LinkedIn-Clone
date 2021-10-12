@@ -19,3 +19,19 @@
 	flex-basis: 21%;
 	margin-right: 19px;
 }
+
+@media (max-width: 300px) {
+}
+@media (max-width: 570px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 922px) {
+	.homepage {
+		margin-left: 300px;
+		margin-right: 300px;
+	}
+	.wiges {
+		display: none;
+	}
+}
