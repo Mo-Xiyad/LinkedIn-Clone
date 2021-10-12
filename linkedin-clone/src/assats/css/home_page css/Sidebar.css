@@ -9,7 +9,7 @@
 	text-align: center;
 	height: fit-content;
 	top: 100px;
-	border: 1px solid #d6d6d6;
+	border: 1px solid rgb(221, 220, 220);
 	background-color: rgb(255, 255, 255);
 	border-radius: 10px;
 }

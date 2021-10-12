@@ -3,19 +3,19 @@
 	margin-left: 386px;
 	margin-right: 385px;
 }
-
-/* .homepage > * {
-	flex-basis: 100%;
-} */
-
 .feeds {
 	flex-basis: 50%;
 }
 .wiges {
+	margin-top: 25px;
 	flex-basis: 29%;
 	margin-left: 19px;
+	border-radius: 10px;
+	background-color: white;
+	border: 1px solid rgb(221, 220, 220);
 }
 .sidebar {
+	margin-top: 25px;
 	flex-basis: 21%;
 	margin-right: 19px;
 }
