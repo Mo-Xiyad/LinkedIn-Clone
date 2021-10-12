@@ -2,6 +2,9 @@
 	background-color: #f3f2ef;
 }
 .header {
+	position: sticky;
+	top: 0px;
+	z-index: 999;
 	background: rgb(255, 255, 255);
 	height: 50px;
 	display: flex;

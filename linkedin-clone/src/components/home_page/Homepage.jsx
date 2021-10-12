@@ -6,8 +6,9 @@ import Widget from './Widget';
 export default function Homepage() {
 	return (
 		<div className="homepage">
+			<Feed />
+			{/* 
 			<Sidebar />
-			{/* <Feed />
 			<Widget /> */}
 		</div>
 	);

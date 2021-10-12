@@ -1,7 +1,6 @@
 .feeds {
-	flex: 0.5;
+	flex: 1;
 	background-color: darkcyan;
 	margin-right: 15px;
 	margin-left: 15px;
-
 }
