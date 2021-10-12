@@ -35,6 +35,49 @@ a > .profile-img {
   border: 1px solid rgb(221, 220, 220);
   border-radius: 10px;
 }
+.cover-img-edit-icon {
+  position: absolute;
+  right: 21px;
+  top: 20px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.cover-img-edit-icon > div {
+  position: absolute;
+  right: 2px;
+}
+.profile-img-edit-icon {
+  position: absolute;
+  right: 21px;
+  bottom: 165px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.profile-img-edit-icon:hover {
+  background-color: #f3f2ef;
+}
+.profile-img-edit-icon > div {
+  position: absolute;
+  right: 4px;
+  bottom: 6px;
+}
+
+.current-work-status {
+  padding-top: 3px;
+  line-height: 40px;
+  font-size: smaller;
+}
+.current-Education-status {
+  line-height: 25px;
+  font-size: smaller;
+}
+
 .profile-info {
   margin-top: 237px;
   color: black;

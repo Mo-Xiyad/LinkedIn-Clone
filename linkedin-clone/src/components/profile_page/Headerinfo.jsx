@@ -11,8 +11,10 @@ import {
 import "../../assats/css/profile_page css/headeinfo.css";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-
 import MultiMenus from "../../assats/js/MultiMenus";
+import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
+import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutlined";
+import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 
 const Wrapper = styled.aside`
   background: #c52465cc;
@@ -140,6 +142,11 @@ const Headerinfo = ({ mydata, isLoading }) => {
               className="profile-banner"
             />
           </div>
+          <div className="cover-img-edit-icon">
+            <div>
+              <ModeEditOutlineOutlinedIcon />
+            </div>
+          </div>
           <Link>
             <Image
               src={mydata.image}
@@ -148,6 +155,13 @@ const Headerinfo = ({ mydata, isLoading }) => {
               key={mydata._id}
             />
           </Link>
+          <div className="profile-img-edit-icon">
+            <div>
+              <ModeEditOutlineOutlinedIcon />
+            </div>
+          </div>
+
+          {/* Before the user info starts */}
           <div className="profile-info">
             <Row>
               <div className="col-6">
@@ -169,13 +183,19 @@ const Headerinfo = ({ mydata, isLoading }) => {
                   </p>
                 </div>
               </div>
-              <div className="col-4 offset-2">
-                <h3>
-                  {mydata.name}
-                  <small>
-                    <span className="font-weight-light">(He/Him)</span>
-                  </small>
-                </h3>
+              <div className="col-4 offset-2 text-muted">
+                <div className="current-work-status ">
+                  <WorkOutlineOutlinedIcon />
+                  <span className="pl-3">
+                    <strong>Work Experience</strong>{" "}
+                  </span>
+                </div>
+                <div className="current-Education-status">
+                  <SchoolOutlinedIcon />
+                  <span className="pl-3">
+                    <strong>Education</strong>
+                  </span>
+                </div>
               </div>
             </Row>
             <div className="user-connetions position-relative">
