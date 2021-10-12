@@ -1,4 +1,10 @@
-.wiges {
-	background-color: darkblue;
-	/* margin-left: 15px; */
+.wiges_top {
+	border-radius: 10px;
+	background-color: white;
+	border: 1px solid rgb(221, 220, 220);
+}
+.wiges_bottom {
+	border-radius: 10px;
+	background-color: white;
+	border: 1px solid rgb(221, 220, 220);
 }
