@@ -2,8 +2,9 @@
 	position: sticky;
 	text-align: center;
 	height: fit-content;
-	flex: 0.2;
+	flex: 0.3;
 	top: 100px;
+	border: 1px solid #d6d6d6;
 	background-color: rgb(255, 255, 255);
 	border-radius: 10px;
 }
@@ -27,8 +28,30 @@
 .textclass_1 {
 	margin-top: 10px;
 	display: flex;
-	padding-left: 20px;
-	padding-right: 20px;
+	flex-wrap: nowrap;
+	padding-left: 10px;
+	padding-right: 10px;
 	flex-direction: row;
 	justify-content: space-between;
+}
+
+.textclass_1 > .text {
+	color: gray;
+	font-weight: 600;
+	font-size: 13px;
+}
+.textclass_1 > .number {
+	
+}
+
+.textclass_2 {
+	color: rgb(54, 54, 54);
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: nowrap;
+	padding-left: 10px;
+	padding-right: 10px;
+	flex-direction: row;
+	font-weight: bold;
+	font-size: 13px;
 }

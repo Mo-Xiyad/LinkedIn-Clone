@@ -7,8 +7,8 @@ export default function Homepage() {
 	return (
 		<div className="homepage">
 			<Sidebar />
-			<Feed />
-			<Widget />
+			{/* <Feed />
+			<Widget /> */}
 		</div>
 	);
 }
