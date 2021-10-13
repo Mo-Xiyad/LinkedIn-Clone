@@ -12,7 +12,7 @@ import { withRouter } from "react-router";
 import Melogo from "./Melogo";
 import { Link } from "react-router-dom";
 
-function Navbar({ selectedUser }) {
+function Navbar({ authorized }) {
   return (
     <div className="header">
       <div className="header_left">
@@ -33,11 +33,10 @@ function Navbar({ selectedUser }) {
         <HeaderIcons title="Jobs" Icon={BusinessCenterIcon} />
         <HeaderIcons title="Messaging" Icon={SmsIcon} />
         <HeaderIcons title="Notifications" Icon={NotificationsIcon} />
-        {selectedUser && (
-          <Link to={"/profile/" + selectedUser}>
-            <Melogo title="ME" />
-          </Link>
-        )}
+
+        <Link to={"/profile/me"}>
+          <Melogo title="ME" authorized={authorized} />
+        </Link>
 
         <HeaderIcons title="Work" Icon={AppsIcon} />
         <div className="notif_text">

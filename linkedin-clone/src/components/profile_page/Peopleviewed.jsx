@@ -18,7 +18,7 @@ const Peopleviewed = ({ title, userData, isLoading }) => {
               <Image src={user.image} />
               <div>
                 <div className="pl-2">
-                  <Link>
+                  <Link to={`/profile/${user._id}`}>
                     <p className="mb-0">
                       <strong className="pr-2">{user.name}</strong>
                       <strong>{user.surname}</strong>
