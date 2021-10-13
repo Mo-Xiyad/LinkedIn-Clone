@@ -22,6 +22,7 @@ const Aside = () => {
       setIsLoading(false);
 
       console.log("Aside ---------------------");
+      console.log(userData);
     };
     getData();
     console.log(userData);
