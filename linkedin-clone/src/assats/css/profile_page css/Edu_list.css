@@ -1,4 +1,4 @@
-.experience {
+.edu_list {
 	background-color: white;
 	border: 1ps solid whitesmoke;
 	border-radius: 10px;
@@ -6,47 +6,52 @@
 	margin-bottom: 20px;
 }
 
-.experience_title {
+.edu_list_title {
 	color: rgb(126, 126, 126);
-	padding-top: 20px;
+	padding-top: 10px;
 	margin-left: 20px;
 	margin-bottom: 20px;
 }
-.experience_list > img {
+.edu_list_list > img {
 	margin-left: 20px;
 	width: 70px;
 	height: 70px;
 	border-radius: 0px;
 }
-.experience_list {
+.edu_list_list {
 	display: flex;
 	flex-direction: row;
-	padding-bottom: 20px;
-	border-bottom: 1px solid rgb(194, 194, 194);
 }
-.experience_list_txt {
+.edu_list_list_txt {
 	margin-left: 10px;
+	cursor: pointer;
 }
-.experience_list_txt > h5 {
+.edu_list_list_txt > h5 {
 	margin-left: 10px;
 	margin-bottom: 3px;
 	font-weight: 500;
 	font-size: 100%;
-	cursor: pointer;
 }
 
-.experience_list_txt > p {
+.edu_list_list_txt > p {
 	margin-left: 10px;
 	font-weight: 200;
 	font-size: 90%;
 	margin-bottom: 0px;
 	color: gray;
-	cursor: pointer;
 }
-.experience_list_txt > p:first-of-type {
+.edu_list_list_txt > p:first-of-type {
 	color: rgb(0, 0, 0);
 }
+.edu_list_list {
+	padding-bottom: 30px;
+	padding-top: 30px;
+	border-bottom: 1px solid rgb(194, 194, 194);
+}
+.edu_list > .edu_list_list:first-of-type {
+	padding-top: 0px;
+}
 
-.experience_list_txt:hover {
+.edu_list_list_txt:hover {
 	text-decoration: underline;
 }
