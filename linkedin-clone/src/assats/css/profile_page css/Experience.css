@@ -10,5 +10,34 @@
 	color: rgb(126, 126, 126);
 	padding-top: 20px;
 	margin-left: 20px;
+	margin-bottom: 20px;
+}
+.experience_list > img {
+	margin-left: 20px;
+	width: 70px;
+	height: 70px;
+	border-radius: 0px;
+}
+.experience_list {
+	display: flex;
+	flex-direction: row;
+}
+.experience_list_txt {
+	margin-left: 10px;
+}
+.experience_list_txt > h5 {
+	margin-left: 10px;
+}
+.experience_list_txt > h6 {
+	margin-left: 10px;
+}
+.experience_list_txt > p {
+	margin-left: 10px;
+	font-weight: 300;
+	font-size: 95%;
 	margin-bottom: 0px;
+    color: blue
+}
+.experience_list_txt > p:first-child {
+	color: rgb(63, 63, 63);
 }

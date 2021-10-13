@@ -10,6 +10,8 @@
 	display: flex;
 	flex-direction: row;
 	margin-left: 10px;
+	align-items: center;
+	margin-bottom: 5px;
 }
 .activity_onlybottom_list_txt > h5 {
 	margin: 0px;
@@ -48,4 +50,10 @@
 }
 .activity > h6:hover {
 	text-decoration: underline;
+}
+
+.activity_bottom_list > img {
+	width: 65px;
+	height: 65px;
+	border-radius: 0px;
 }
