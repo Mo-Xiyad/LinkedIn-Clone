@@ -29,21 +29,19 @@ const Aside = () => {
   }, []);
 
   return (
-    <aside class="col-sm-4 col-md-4 col-lg-4">
-      <SideContent />
-
-      <Peopleviewed
-        title={"People also viewed"}
-        isLoading={isLoading}
-        userData={userData}
-      />
-
-      <SideContent />
-      <SideContent />
-      <SideContent />
-      <SideContent />
-      <SideContent />
-    </aside>
-  );
+		<div class="sideContent_big">
+			<SideContent />
+			<Peopleviewed
+				title={'People also viewed'}
+				isLoading={isLoading}
+				userData={userData}
+			/>
+			<SideContent />
+			<SideContent />
+			<SideContent />
+			<SideContent />
+			<SideContent />
+		</div>
+	);
 };
 export default Aside;
