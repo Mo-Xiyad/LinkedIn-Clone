@@ -5,6 +5,9 @@ import Headerinfo from "./Headerinfo";
 import { fetchData } from "../../assats/js";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import YourDashboard from "./Yourdashboard";
+import Activity from "./Activity";
+import Experience from "./Experience";
 
 const InnerLayout = ({ authorized }) => {
   const params = useParams();
@@ -29,11 +32,16 @@ const InnerLayout = ({ authorized }) => {
     <Outterlayout>
       <div className=" col-sm-6 col-md-7 col-lg-8">
         {profile && (
-          <Headerinfo
-            profile={profile}
-            authorized={authorized}
-            fetchUser={fetchUser}
-          />
+          <>
+            <Headerinfo
+              profile={profile}
+              authorized={authorized}
+              fetchUser={fetchUser}
+            />
+            <YourDashboard />
+            <Activity />
+            <Experience authorized={authorized} />
+          </>
         )}
       </div>
       {/* Side bar will be inserted here */}
