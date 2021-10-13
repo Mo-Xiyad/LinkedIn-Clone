@@ -13,7 +13,7 @@ const InnerLayout = ({ setSelectedUser }) => {
     let getData = async () => {
       let dataFromEndpoint = await fetchData("me", "GET");
       setMydat(dataFromEndpoint);
-      console.log(dataFromEndpoint);
+      // console.log(dataFromEndpoint);
       setIsLoading(false);
     };
     getData();
@@ -26,9 +26,7 @@ const InnerLayout = ({ setSelectedUser }) => {
   return (
     <Outterlayout>
       <div className=" col-sm-6 col-md-7 col-lg-8">
-        {mydata === undefined ? (
-          <p>nothing</p>
-        ) : (
+        {mydata === undefined ? null : (
           <Headerinfo isLoading={isLoading} mydata={mydata} />
         )}
       </div>
