@@ -44,3 +44,7 @@
 .experience_list_txt > p:first-of-type {
 	color: rgb(0, 0, 0);
 }
+
+.experience_list_txt:hover {
+	text-decoration: underline;
+}

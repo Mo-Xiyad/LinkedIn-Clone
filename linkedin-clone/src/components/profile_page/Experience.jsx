@@ -18,7 +18,7 @@ export default function Experience() {
 					<p>User Comented</p>
 				</div>
 			</div>
-			<Edu_list/>
+			<Edu_list />
 		</div>
 	);
 }

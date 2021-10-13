@@ -24,6 +24,7 @@
 }
 .edu_list_list_txt {
 	margin-left: 10px;
+	cursor: pointer;
 }
 .edu_list_list_txt > h5 {
 	margin-left: 10px;
@@ -49,4 +50,8 @@
 }
 .edu_list > .edu_list_list:first-of-type {
 	padding-top: 0px;
+}
+
+.edu_list_list_txt:hover {
+	text-decoration: underline;
 }
