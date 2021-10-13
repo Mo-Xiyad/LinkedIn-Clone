@@ -5,3 +5,20 @@
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+.activity_bottom_list {
+	display: flex;
+	flex-direction: row;
+}
+.activity > div > h6 {
+	cursor: pointer;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 7px;
+}
+.activity > div > h6:hover {
+	background-color: whitesmoke;
+}
+.activity > div:last-child {
+	border-top: 1px solid rgb(204, 204, 204);
+}
