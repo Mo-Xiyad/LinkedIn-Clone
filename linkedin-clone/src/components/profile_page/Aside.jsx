@@ -6,20 +6,22 @@ import Peopleviewed from "./Peopleviewed";
 const Aside = () => {
   const [userData, setUserData] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  const data = [];
 
   useEffect(() => {
     let getData = async () => {
       let dataFromEndpoint = await fetchData("", "GET");
 
-      for (let i = 0; i < 10; i++) {
-        setUserData(dataFromEndpoint[i]);
-        data.push(dataFromEndpoint[i]);
+      let num = Math.floor(Math.random() * 5);
+      let data = [];
+
+      for (let i = 0; i < 5; i++) {
+        data.push(dataFromEndpoint[num + i]);
       }
+
+      setUserData(data);
+      setIsLoading(false);
+
       console.log("Aside ---------------------");
-      console.log(data);
-      console.log(userData);
-      // setIsLoading(false);
     };
     getData();
     console.log(userData);
@@ -28,7 +30,13 @@ const Aside = () => {
   return (
     <aside class="col-sm-4 col-md-4 col-lg-4">
       <SideContent />
-      <Peopleviewed />
+      {userData === undefined ? null : (
+        <Peopleviewed
+          title={"People also viewed"}
+          isLoading={isLoading}
+          userData={userData}
+        />
+      )}
       <SideContent />
       <SideContent />
       <SideContent />

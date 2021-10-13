@@ -26,9 +26,7 @@ const InnerLayout = ({ setSelectedUser }) => {
   return (
     <Outterlayout>
       <div className=" col-sm-6 col-md-7 col-lg-8">
-        {mydata === undefined ? (
-          <p>nothing</p>
-        ) : (
+        {mydata === undefined ? null : (
           <Headerinfo isLoading={isLoading} mydata={mydata} />
         )}
       </div>

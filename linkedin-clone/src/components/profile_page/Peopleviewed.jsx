@@ -1,99 +1,42 @@
-import { Image, Button } from "react-bootstrap";
+import { Image, Button, Spinner } from "react-bootstrap";
 import "../../assats/css/profile_page css/people_view.css";
-const Peopleviewed = () => {
+import { Link } from "react-router-dom";
+const Peopleviewed = ({ title, userData, isLoading }) => {
   return (
     <div class="p-3 pl-4 pb-4 mb-3 bg-light rounded aside">
       <div className="peope-view-user-card">
-        <h6>People also viewed</h6>
+        <h6>{title}</h6>
+        {isLoading && (
+          <div className="text-center">
+            <Spinner animation="border" variant="success" />
+          </div>
+        )}
         {/* card below here */}
-        <div className="pt-3 d-flex">
-          <Image src="https://www.metromodels.com/images/board/talent/2.jpg" />
-          <div>
-            <div className="pl-2">
-              <a href="#name">
-                <p className="mb-0">
-                  <strong>Mohamed Nashwan</strong>
-                </p>
-                <p className="mb-0 text-muted">
-                  <small>Market Developer at</small>
-                </p>
-                <p className="mb-0 text-muted">
-                  <small>Euromarketingmaldives</small>
-                </p>
-              </a>
-              <div className="mx-3 pt-2 btn-people-view-connect position-relative">
-                <Button>Connect</Button>{" "}
+        {userData &&
+          userData.map((user) => (
+            <div className="pt-3 d-flex" key={user._id}>
+              <Image src={user.image} />
+              <div>
+                <div className="pl-2">
+                  <Link>
+                    <p className="mb-0">
+                      <strong className="pr-2">{user.name}</strong>
+                      <strong>{user.surname}</strong>
+                    </p>
+                    <p className="mb-0 text-muted">
+                      <small>{user.title}</small>
+                    </p>
+                    <p className="mb-0 text-muted">
+                      {/* <small>Euromarketingmaldives</small> */}
+                    </p>
+                  </Link>
+                  <div className="mx-3 pt-2 btn-people-view-connect position-relative">
+                    <Button type="button">Connect</Button>{" "}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        {/*  */}
-        <div className="pt-3 d-flex">
-          <Image src="https://www.metromodels.com/images/board/talent/2.jpg" />
-          <div>
-            <div className="pl-2">
-              <a href="#name">
-                <p className="mb-0">
-                  <strong>Mohamed Nashwan</strong>
-                </p>
-                <p className="mb-0 text-muted">
-                  <small>Market Developer at</small>
-                </p>
-                <p className="mb-0 text-muted">
-                  <small>Euromarketingmaldives</small>
-                </p>
-              </a>
-              <div className="mx-3 pt-2 btn-people-view-connect position-relative">
-                <Button>Connect</Button>{" "}
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*  */}
-        <div className="pt-3 d-flex">
-          <Image src="https://www.metromodels.com/images/board/talent/2.jpg" />
-          <div>
-            <div className="pl-2">
-              <a href="#name">
-                <p className="mb-0">
-                  <strong>Mohamed Nashwan</strong>
-                </p>
-                <p className="mb-0 text-muted">
-                  <small>Market Developer at</small>
-                </p>
-                <p className="mb-0 text-muted">
-                  <small>Euromarketingmaldives</small>
-                </p>
-              </a>
-              <div className="mx-3 pt-2 btn-people-view-connect position-relative">
-                <Button>Connect</Button>{" "}
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*  */}
-        <div className="pt-3 d-flex">
-          <Image src="https://www.metromodels.com/images/board/talent/2.jpg" />
-          <div>
-            <div className="pl-2">
-              <a href="#name">
-                <p className="mb-0">
-                  <strong>Mohamed Nashwan</strong>
-                </p>
-                <p className="mb-0 text-muted">
-                  <small>Market Developer at</small>
-                </p>
-                <p className="mb-0 text-muted">
-                  <small>Euromarketingmaldives</small>
-                </p>
-              </a>
-              <div className="mx-3 pt-2 btn-people-view-connect position-relative">
-                <Button>Connect</Button>{" "}
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*  */}
+          ))}
       </div>
     </div>
   );
