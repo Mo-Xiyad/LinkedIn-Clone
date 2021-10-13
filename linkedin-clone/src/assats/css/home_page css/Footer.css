@@ -2,16 +2,18 @@
 	margin-top: 20px;
 	color: gray;
 	font-size: 80%;
-	font-weight: 400;
+	font-weight: 300;
 }
-
+.footer > * p{
+    cursor: pointer;
+}
 .footer > * p:hover {
 	color: rgb(27, 27, 221);
 	text-decoration: underline;
 }
 .footer > * p {
 	margin-top: 0px;
-	margin-bottom: 7px;
+	margin-bottom: 4px;
 }
 .txt_row_first {
 	margin-left: 30px;
@@ -26,6 +28,9 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
+}
+.txt_row_second > P {
+	margin-bottom: 0px;
 }
 .txt_row_three {
 	margin-left: 30px;
