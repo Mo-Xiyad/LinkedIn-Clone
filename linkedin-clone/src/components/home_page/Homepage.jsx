@@ -9,7 +9,7 @@ export default function Homepage({ authorized }) {
     <div className="homepage">
       <Sidebar />
       <Feed authorized={authorized} />
-      {/* <Widget /> */}
+      <Widget />
     </div>
   );
 }

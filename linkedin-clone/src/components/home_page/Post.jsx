@@ -4,8 +4,9 @@ import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import SendIcon from "@mui/icons-material/Send";
 import ShareIcon from "@mui/icons-material/Share";
 import MessageIcon from "@mui/icons-material/Message";
-export default function Post() {
-  const [posts, setPosts] = useState();
+
+export default function Post({ authorized }) {
+  const [posts, setPosts] = useState([]);
   let getdata = async () => {
     try {
       const response = await fetch(
@@ -21,9 +22,11 @@ export default function Post() {
       if (response.ok) {
         const data = await response.json();
         let posts = [];
-        for (let i = 0; i < 5; i++) {
+
+        for (let i = 0; i < 150; i++) {
           posts.push(data[i]);
         }
+
         setPosts(posts);
         console.log("POSTS========");
         console.log(posts);
@@ -40,35 +43,31 @@ export default function Post() {
   }, []);
 
   return (
-    <div className="post">
-      <div className="poster_header">
-        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80" />
+    <>
+      {posts.map((post) => (
+        <div className="post">
+          <div className="poster_header">
+            <img src={post.user.image} />
 
-        <div className="header_name">
-          <h4>Name</h4>
-          <p>Discription</p>
-          <p>3d.</p>
+            <div className="header_name">
+              <h4>{post.user.name}</h4>
+              <p>{post.user.title}</p>
+              <p>3d.</p>
+            </div>
+          </div>
+          <h4 className="poster_blog">{post.text}</h4>
+          <div className="img_container">
+            <img className="img-fluid" src={post.image} />
+          </div>
+
+          <div className="poster_icon">
+            <Postinput Icon={ThumbUpAltIcon} title="Like" />
+            <Postinput Icon={MessageIcon} title="Comment" />
+            <Postinput Icon={ShareIcon} title="Share" />
+            <Postinput Icon={SendIcon} title="Send" />
+          </div>
         </div>
-      </div>
-      <h4 className="poster_blog">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam aut
-        veniam obcaecati quis odio excepturi. Nisi officiis, in, odio,
-        perspiciatis sit maxime culpa voluptates recusandae aliquam veritatis
-        inventore adipisci quaerat.
-      </h4>
-      <div className="img_container">
-        <img
-          className="img-fluid"
-          src="https://images.unsplash.com/photo-1633109611134-c41b5c0bbc1a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80"
-        />
-      </div>
-
-      <div className="poster_icon">
-        <Postinput Icon={ThumbUpAltIcon} title="Like" />
-        <Postinput Icon={MessageIcon} title="Comment" />
-        <Postinput Icon={ShareIcon} title="Share" />
-        <Postinput Icon={SendIcon} title="Send" />
-      </div>
-    </div>
+      ))}
+    </>
   );
 }
