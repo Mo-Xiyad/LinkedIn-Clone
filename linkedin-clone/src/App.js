@@ -53,6 +53,7 @@ function App() {
               <InnerLayout {...props} authorized={authorized} />
             )}
           />
+          {/* FOOTER HERE */}
         </Router>
       )}
     </div>

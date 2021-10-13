@@ -41,6 +41,9 @@ const InnerLayout = ({ authorized }) => {
             <YourDashboard />
             <Activity />
             <Experience authorized={authorized} />
+            {/* use this area o add other COMPONENTS  */}
+            {/* SKILLS  */}
+            {/* ANDOSMENT  */}
           </>
         )}
       </div>
