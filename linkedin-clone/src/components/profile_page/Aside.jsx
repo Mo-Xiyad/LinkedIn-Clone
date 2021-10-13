@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Peopleviewed from "./Peopleviewed";
 
 const Aside = () => {
-  const [userData, setUserData] = useState();
+  const [userData, setUserData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -22,6 +22,7 @@ const Aside = () => {
       setIsLoading(false);
 
       console.log("Aside ---------------------");
+      console.log(userData);
     };
     getData();
     console.log(userData);
@@ -30,13 +31,13 @@ const Aside = () => {
   return (
     <aside class="col-sm-4 col-md-4 col-lg-4">
       <SideContent />
-      {userData === undefined ? null : (
-        <Peopleviewed
-          title={"People also viewed"}
-          isLoading={isLoading}
-          userData={userData}
-        />
-      )}
+
+      <Peopleviewed
+        title={"People also viewed"}
+        isLoading={isLoading}
+        userData={userData}
+      />
+
       <SideContent />
       <SideContent />
       <SideContent />

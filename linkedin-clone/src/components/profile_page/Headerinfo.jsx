@@ -16,6 +16,7 @@ import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import Yourdashboard from "./Yourdashboard";
+import EditModal from "./ProfileModal";
 
 const Wrapper = styled.aside`
   background: #c52465cc;
@@ -123,160 +124,170 @@ const menus = [
   },
 ];
 
-const Headerinfo = ({ mydata, isLoading }) => {
+const Headerinfo = ({ profile, authorized, fetchUser }) => {
   const [buttonOne, setButtonOne] = useState(false);
   const [buttonTwo, setButtonTwo] = useState(false);
   const [buttonThree, setButtonThree] = useState(false);
+  const [show, setShow] = useState(false);
 
   return (
-		<>
-			<Jumbotron className="position-relative profile-heading-container">
-				{mydata && isLoading && (
-					<div className="text-center">
-						<Spinner animation="border" variant="success" />
-					</div>
-				)}
-				{mydata && (
-					<div>
-						<div>
-							<Image
-								src="https://ischool.uw.edu/sites/default/files/2017-08/george_header.jpg"
-								className="profile-banner"
-							/>
-						</div>
-						<div className="cover-img-edit-icon">
-							<div>
-								<ModeEditOutlineOutlinedIcon />
-							</div>
-						</div>
-						<Link>
-							<Image
-								src={mydata.image}
-								roundedCircle
-								className="profile-img"
-								key={mydata._id}
-							/>
-						</Link>
-						<div className="profile-img-edit-icon">
-							<div>
-								<ModeEditOutlineOutlinedIcon />
-							</div>
-						</div>
+    <>
+      <EditModal
+        show={show}
+        setShow={setShow}
+        authorized={authorized}
+        fetchUser={fetchUser}
+      />
+      <Jumbotron className="position-relative profile-heading-container">
+        {/* {profile && isLoading && (
+          <div className="text-center">
+            <Spinner animation="border" variant="success" />
+          </div>
+        )} */}
+        {profile && (
+          <div>
+            <div>
+              <Image
+                src="https://ischool.uw.edu/sites/default/files/2017-08/george_header.jpg"
+                className="profile-banner"
+              />
+            </div>
+            {authorized._id === profile._id && (
+              <div className="cover-img-edit-icon">
+                <div>
+                  <ModeEditOutlineOutlinedIcon />
+                </div>
+              </div>
+            )}
+            <Link>
+              <Image
+                src={profile.image}
+                roundedCircle
+                className="profile-img"
+                key={profile._id}
+              />
+            </Link>
+            {authorized._id === profile._id && (
+              <div className="profile-img-edit-icon">
+                <div>
+                  <ModeEditOutlineOutlinedIcon onClick={() => setShow(true)} />
+                </div>
+              </div>
+            )}
 
-						{/* Before the user info starts */}
-						<div className="profile-info">
-							<Row>
-								<div className="col-6">
-									<h3>
-										{mydata.name}
-										<small>
-											<span className="font-weight-light">(He/Him)</span>
-										</small>
-									</h3>
-									<div className="profile-user-details">
-										<p>{mydata.title}</p>
-										<p>
-											<span className="font-weight-light text-muted">
-												{mydata.area},
-											</span>
-											<strong className="text-muted pl-2">
-												<Link>Contact info</Link>
-											</strong>
-										</p>
-									</div>
-								</div>
-								<div className="col-4 offset-2 text-muted">
-									<div className="current-work-status ">
-										<WorkOutlineOutlinedIcon />
-										<span className="pl-3">
-											<strong>Work Experience</strong>{' '}
-										</span>
-									</div>
-									<div className="current-Education-status">
-										<SchoolOutlinedIcon />
-										<span className="pl-3">
-											<strong>Education</strong>
-										</span>
-									</div>
-								</div>
-							</Row>
-							<div className="user-connetions position-relative">
-								<p className="pt-2">
-									<strong className="text-muted">
-										<Link>500+ connections</Link>
-									</strong>
-								</p>
-								<div className="d-flex">
-									<div className="btn-one">
-										<Button onClick={() => setButtonOne(!buttonOne)}>
-											Open to
-										</Button>{' '}
-									</div>
-									{buttonOne === true ? (
-										<div className="btn-one-drowpdown">
-											<div className="text-muted">
-												<div className="">
-													<a href="#Hiring">
-														<p className="mb-1">
-															<strong>Hiring</strong>
-														</p>
-														<span className="text-muted">
-															Share that you’re hiring and attract qualified
-															candidates
-														</span>
-													</a>
-												</div>
-												<div className="mb-4 mt-2">
-													<a href="#Providing-services">
-														<p className="mb-1">
-															<strong>Providing services</strong>
-														</p>
-														<span className="text-muted">
-															Showcase services you offer so new clients can
-															discover you
-														</span>
-													</a>
-												</div>
-											</div>
-										</div>
-									) : null}
-									<div className="mx-2 btn-two position-relative">
-										<Button onClick={() => setButtonTwo(!buttonTwo)}>
-											Add section
-										</Button>{' '}
-									</div>
-									{buttonTwo === true ? (
-										<div className="btn-two-drowpdown">
-											<MultiMenus menus={menus} />
-										</div>
-									) : null}
+            {/* Before the user info starts */}
+            <div className="profile-info">
+              <Row>
+                <div className="col-6">
+                  <h3>
+                    {profile.name}
+                    <small>
+                      <span className="font-weight-light">(He/Him)</span>
+                    </small>
+                  </h3>
+                  <div className="profile-user-details">
+                    <p>{profile.title}</p>
+                    <p>
+                      <span className="font-weight-light text-muted">
+                        {profile.area},
+                      </span>
+                      <strong className="text-muted pl-2">
+                        <Link>Contact info</Link>
+                      </strong>
+                    </p>
+                  </div>
+                </div>
+                <div className="col-4 offset-2 text-muted">
+                  <div className="current-work-status ">
+                    <WorkOutlineOutlinedIcon />
+                    <span className="pl-3">
+                      <strong>Work Experience</strong>{" "}
+                    </span>
+                  </div>
+                  <div className="current-Education-status">
+                    <SchoolOutlinedIcon />
+                    <span className="pl-3">
+                      <strong>Education</strong>
+                    </span>
+                  </div>
+                </div>
+              </Row>
+              <div className="user-connetions position-relative">
+                <p className="pt-2">
+                  <strong className="text-muted">
+                    <Link>500+ connections</Link>
+                  </strong>
+                </p>
+                <div className="d-flex">
+                  <div className="btn-one">
+                    <Button onClick={() => setButtonOne(!buttonOne)}>
+                      Open to
+                    </Button>{" "}
+                  </div>
+                  {buttonOne === true ? (
+                    <div className="btn-one-drowpdown">
+                      <div className="text-muted">
+                        <div className="">
+                          <a href="#Hiring">
+                            <p className="mb-1">
+                              <strong>Hiring</strong>
+                            </p>
+                            <span className="text-muted">
+                              Share that you’re hiring and attract qualified
+                              candidates
+                            </span>
+                          </a>
+                        </div>
+                        <div className="mb-4 mt-2">
+                          <a href="#Providing-services">
+                            <p className="mb-1">
+                              <strong>Providing services</strong>
+                            </p>
+                            <span className="text-muted">
+                              Showcase services you offer so new clients can
+                              discover you
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  ) : null}
+                  <div className="mx-2 btn-two position-relative">
+                    <Button onClick={() => setButtonTwo(!buttonTwo)}>
+                      Add section
+                    </Button>{" "}
+                  </div>
+                  {buttonTwo === true ? (
+                    <div className="btn-two-drowpdown">
+                      <MultiMenus menus={menus} />
+                    </div>
+                  ) : null}
 
-									<div className="btn-three">
-										<Button onClick={() => setButtonThree(!buttonThree)}>
-											More
-										</Button>{' '}
-									</div>
-									{buttonThree === true ? (
-										<div className="btn-three-drowpdown">
-											<div className="text-muted">
-												<p>Share profile in a message</p>
-												<p>Save to PDF</p>
-												<p>Build a resume</p>
-											</div>
-										</div>
-									) : null}
-								</div>
-							</div>
-						</div>
-						<div></div>
-					</div>
-				)}
-			</Jumbotron>
+                  <div className="btn-three">
+                    <Button onClick={() => setButtonThree(!buttonThree)}>
+                      More
+                    </Button>{" "}
+                  </div>
+                  {buttonThree === true ? (
+                    <div className="btn-three-drowpdown">
+                      <div className="text-muted">
+                        <p>Share profile in a message</p>
+                        <p>Save to PDF</p>
+                        <p>Build a resume</p>
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        )}
+      </Jumbotron>
 
       <Yourdashboard />
-      
-		</>
-	);
+    </>
+  );
 };
 
 export default Headerinfo;
