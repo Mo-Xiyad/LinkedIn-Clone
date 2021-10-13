@@ -13,7 +13,7 @@ const InnerLayout = ({ setSelectedUser }) => {
     let getData = async () => {
       let dataFromEndpoint = await fetchData("me", "GET");
       setMydat(dataFromEndpoint);
-      console.log(dataFromEndpoint);
+      // console.log(dataFromEndpoint);
       setIsLoading(false);
     };
     getData();
