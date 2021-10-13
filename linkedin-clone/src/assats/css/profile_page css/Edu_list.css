@@ -46,7 +46,6 @@
 .edu_list_list {
 	padding-bottom: 30px;
 	padding-top: 30px;
-	border-bottom: 1px solid rgb(194, 194, 194);
 }
 .edu_list > .edu_list_list:first-of-type {
 	padding-top: 0px;

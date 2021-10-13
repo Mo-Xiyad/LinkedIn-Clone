@@ -7,6 +7,7 @@
 }
 
 .experience_title {
+	font-size: 160%;
 	color: rgb(126, 126, 126);
 	padding-top: 20px;
 	margin-left: 20px;
@@ -22,7 +23,6 @@
 	display: flex;
 	flex-direction: row;
 	padding-bottom: 20px;
-	border-bottom: 1px solid rgb(194, 194, 194);
 }
 .experience_list_txt {
 	margin-left: 10px;
@@ -50,3 +50,13 @@
 .experience_list_txt:hover {
 	text-decoration: underline;
 }
+/* .adding_exp {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.adding_exp > h5:last-of-type {
+	margin-top: 20pxs;
+	color: green;
+} */
