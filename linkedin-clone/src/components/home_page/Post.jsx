@@ -5,43 +5,7 @@ import SendIcon from "@mui/icons-material/Send";
 import ShareIcon from "@mui/icons-material/Share";
 import MessageIcon from "@mui/icons-material/Message";
 
-export default function Post({ authorized }) {
-  const [posts, setPosts] = useState([]);
-  let getdata = async () => {
-    try {
-      const response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/posts/ ",
-        {
-          methode: "Get",
-          headers: {
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTY1ZWZjMmEwMjlmNTAwMTU3YzYzNzAiLCJpYXQiOjE2MzQwNzA0NjYsImV4cCI6MTYzNTI4MDA2Nn0.6TmpZr9l1pAa5KnLrVIjmecOf-U4gH_MYwf39lJOGWM",
-          },
-        }
-      );
-      if (response.ok) {
-        const data = await response.json();
-        let posts = [];
-
-        for (let i = 0; i < 150; i++) {
-          posts.push(data[i]);
-        }
-
-        setPosts(posts);
-        console.log("POSTS========");
-        console.log(posts);
-      } else {
-        console.log("rr after the fetch");
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  useEffect(() => {
-    getdata();
-  }, []);
-
+export default function Post({ authorized, posts }) {
   return (
     <>
       {posts.map((post) => (
