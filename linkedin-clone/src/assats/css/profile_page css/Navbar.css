@@ -1,0 +1,144 @@
+.App {
+  background-color: #f3f2ef;
+}
+.header {
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+  background: rgb(255, 255, 255);
+  height: 50px;
+  display: flex;
+  margin: 0%;
+  margin-left: 386px;
+  margin-right: 385px;
+  justify-content: space-between;
+}
+
+.header_left {
+  margin-left: 0px;
+  display: flex;
+}
+.header_left > img {
+  object-fit: contain;
+  width: 35px;
+  margin-right: 15px;
+}
+
+.header_search {
+  margin-top: 11px;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  background-color: #eef3f8;
+  border-radius: 6px;
+}
+.notif_text {
+  margin-right: 10px;
+  margin-top: -3px;
+  padding-bottom: -25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  color: #5d3b09;
+  line-height: 18px;
+  font-size: 12px;
+}
+.header_search > input {
+  margin-left: 5px;
+  outline: none;
+  background: none;
+  border: none;
+  color: #c8d8e7;
+  width: 250px;
+}
+
+.header_search > input:focus {
+  width: 400px;
+}
+
+.header_search_icon {
+  margin: 10px;
+}
+.header_right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (max-width: 300px) {
+  .header_left {
+    display: none !important;
+  }
+}
+
+@media (max-width: 570px) {
+  .header_search {
+    display: none !important;
+  }
+  .header_title {
+    display: none !important;
+  }
+  .header_left {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header_search > input {
+    display: none !important;
+  }
+  .header_search {
+    background-color: #ffffff;
+  }
+  .header_title {
+    display: block !important;
+  }
+  .header_left {
+    margin-left: 0px;
+  }
+}
+
+/* @media (min-width: 300px) {
+	.header_search {
+		display: none;
+	}
+	.header {
+		margin: 0;
+	}
+	.header_left  {
+		display: none
+	}
+
+	.header_right h5 {
+		display: none;
+	}
+}
+
+@media (min-width: 576px) {
+	.header_right h5 {
+		display: block;
+	}
+}
+
+@media (min-width: 768px) {
+	.header_search {
+		display: block;
+		background-color: #f0f0f0;
+		margin: 10;
+		padding: 0;
+	}
+
+	.header_left {
+		margin-left: -10px;
+		display: flex;
+	}
+}
+
+@media (min-width: 992px) {
+} */
+
+.MuiIconButton-root {
+  padding: 8px 4px 3px 7px !important;
+}
+/* 10px ​3px 3px 6px */

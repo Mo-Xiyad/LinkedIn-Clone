@@ -1,0 +1,35 @@
+.homepage {
+	display: flex;
+	margin-left: 386px;
+	margin-right: 385px;
+}
+.feeds {
+	flex-basis: 50%;
+}
+.wiges {
+	margin-top: 25px;
+	flex-basis: 29%;
+	margin-left: 19px;
+	
+}
+.sidebar {
+	margin-top: 25px;
+	flex-basis: 21%;
+	margin-right: 19px;
+}
+
+@media (max-width: 300px) {
+}
+@media (max-width: 570px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 922px) {
+	.homepage {
+		margin-left: 300px;
+		margin-right: 300px;
+	}
+	.wiges {
+		display: none;
+	}
+}

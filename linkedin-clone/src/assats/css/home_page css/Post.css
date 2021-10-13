@@ -1,0 +1,56 @@
+.post {
+	background-color: white;
+	border-radius: 10px;
+	margin-top: 25px;
+	color: gray;
+}
+
+.post > .poster_header > img {
+	object-fit: cover;
+	border-radius: 50%;
+	width: 50px !important;
+	height: 50px !important;
+	margin-left: 15px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.poster_header {
+	display: flex;
+	flex-direction: row;
+}
+.header_name > h4 {
+	margin-top: 10px;
+	font-size: 100%;
+	font-weight: 600;
+}
+.header_name > p {
+	font-size: 85%;
+	font-weight: 200;
+	margin-top: -10px;
+	margin-bottom: 5px;
+}
+
+.poster_blog {
+	margin-left: 15px;
+	margin-right: 10px;
+	font-size: 110%;
+	font-weight: 475;
+}
+
+.poster_icon {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-top: 5px;
+}
+
+.img_container {
+	display: flex;
+	justify-content: center;
+	max-width: 100%;
+	max-height: auto;
+	overflow: hidden;
+}
+
+
