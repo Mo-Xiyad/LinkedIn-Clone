@@ -18,12 +18,14 @@
 	margin-left: 10px;
 	font-size: 100%;
 	font-weight: 500;
+	cursor: pointer;
 }
 .activity_onlybottom_list_txt > p {
 	margin-left: 10px;
 	font-weight: 300;
 	font-size: 95%;
 	padding-top: 5px;
+	cursor: pointer;
 }
 .activity > div > h6 {
 	cursor: pointer;
@@ -56,4 +58,7 @@
 	width: 65px;
 	height: 65px;
 	border-radius: 0px;
+}
+.activity_onlybottom_list_txt:hover {
+	text-decoration: underline;
 }
