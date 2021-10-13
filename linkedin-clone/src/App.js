@@ -6,6 +6,7 @@ import './assats/css/profile_page css/Melogo.css';
 import './assats/css/profile_page css/Yourdashboard.css';
 import './assats/css/profile_page css/Dashboardlist.css';
 import './assats/css/profile_page css/Experience.css';
+import './assats/css/profile_page css/Edu_list.css';
 import './assats/css/profile_page css/Activity.css';
 import './assats/css/home_page css/Feed.css';
 import './assats/css/home_page css/Sidebar.css';
