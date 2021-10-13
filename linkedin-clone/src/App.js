@@ -9,6 +9,7 @@ import "./assats/css/home_page css/Widget.css";
 import "./assats/css/home_page css/Homepage.css";
 import "./assats/css/home_page css/Postinput.css";
 import "./assats/css/home_page css/Post.css";
+import "./assats/css/home_page css/Footer.css";
 import Navbar from "./components/profile_page/Navbar";
 import HomePage from "./components/home_page/Homepage";
 import InnerLayout from "./components/profile_page/InnerLayout";

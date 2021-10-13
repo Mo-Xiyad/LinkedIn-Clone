@@ -5,6 +5,7 @@ import AddBoxIcon from '@mui/icons-material/AddBox';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import Widget_ppl from './Widget_ppl';
 import Widget_ad from './Widget_ad';
+import Footer from './Footer';
 export default function Widget() {
 	return (
 		<div className="wiges">
@@ -35,6 +36,7 @@ export default function Widget() {
 				<Widget_ad />
 				<Widget_ad />
 			</div>
+			<Footer />
 		</div>
 	);
 }
