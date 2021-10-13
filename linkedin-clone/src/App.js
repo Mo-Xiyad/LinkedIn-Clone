@@ -1,27 +1,3 @@
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './assats/css/profile_page css/profile_layout.css';
-import './assats/css/profile_page css/HeaderIcons.css';
-import './assats/css/profile_page css/Navbar.css';
-import './assats/css/profile_page css/Melogo.css';
-import './assats/css/profile_page css/Yourdashboard.css';
-import './assats/css/profile_page css/Dashboardlist.css';
-import './assats/css/profile_page css/Experience.css';
-import './assats/css/profile_page css/Edu_list.css';
-import './assats/css/profile_page css/Activity.css';
-import './assats/css/home_page css/Feed.css';
-import './assats/css/home_page css/Sidebar.css';
-import './assats/css/home_page css/Widget.css';
-import './assats/css/home_page css/Homepage.css';
-import './assats/css/home_page css/Postinput.css';
-import './assats/css/home_page css/Post.css';
-import './assats/css/home_page css/Footer.css';
-import Navbar from './components/profile_page/Navbar';
-import HomePage from './components/home_page/Homepage';
-import InnerLayout from './components/profile_page/InnerLayout';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assats/css/profile_page css/profile_layout.css";
 import "./assats/css/profile_page css/HeaderIcons.css";
@@ -30,6 +6,7 @@ import "./assats/css/profile_page css/Melogo.css";
 import "./assats/css/profile_page css/Yourdashboard.css";
 import "./assats/css/profile_page css/Dashboardlist.css";
 import "./assats/css/profile_page css/Experience.css";
+import "./assats/css/profile_page css/Edu_list.css";
 import "./assats/css/profile_page css/Activity.css";
 import "./assats/css/home_page css/Feed.css";
 import "./assats/css/home_page css/Sidebar.css";
@@ -38,6 +15,12 @@ import "./assats/css/home_page css/Homepage.css";
 import "./assats/css/home_page css/Postinput.css";
 import "./assats/css/home_page css/Post.css";
 import "./assats/css/home_page css/Footer.css";
+import Navbar from "./components/profile_page/Navbar";
+import HomePage from "./components/home_page/Homepage";
+import InnerLayout from "./components/profile_page/InnerLayout";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { fetchData } from "./assats/js";
 
 function App() {
   const [authorized, setAuthorized] = useState(null);
@@ -58,7 +41,11 @@ function App() {
       {authorized && !isLoading && (
         <Router>
           <Navbar authorized={authorized} />
-          <Route path="/" exact={true} component={HomePage} />
+          <Route
+            path="/"
+            exact={true}
+            render={(props) => <HomePage {...props} authorized={authorized} />}
+          />
           <Route
             path="/profile/:userId"
             exact={true}

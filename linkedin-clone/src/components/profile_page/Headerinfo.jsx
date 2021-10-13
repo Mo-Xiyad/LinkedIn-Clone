@@ -15,7 +15,7 @@ import MultiMenus from "../../assats/js/MultiMenus";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
-import Yourdashboard from "./Yourdashboard";
+
 import EditModal from "./ProfileModal";
 
 const Wrapper = styled.aside`
@@ -284,8 +284,6 @@ const Headerinfo = ({ profile, authorized, fetchUser }) => {
           </div>
         )}
       </Jumbotron>
-
-      <Yourdashboard />
     </>
   );
 };
