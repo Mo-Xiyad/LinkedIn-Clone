@@ -9,6 +9,19 @@
 .activity_bottom_list {
 	display: flex;
 	flex-direction: row;
+	margin-left: 10px;
+}
+.activity_onlybottom_list_txt > h5 {
+	margin: 0px;
+	margin-left: 10px;
+	font-size: 100%;
+	font-weight: 500;
+}
+.activity_onlybottom_list_txt > p {
+	margin-left: 10px;
+	font-weight: 300;
+	font-size: 95%;
+	padding-top: 5px;
 }
 .activity > div > h6 {
 	cursor: pointer;
@@ -21,4 +34,18 @@
 }
 .activity > div:last-child {
 	border-top: 1px solid rgb(204, 204, 204);
+}
+.activity > h5 {
+	color: rgb(126, 126, 126);
+	padding-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 0px;
+}
+.activity > h6 {
+	font-size: 80%;
+	margin-left: 20px;
+	color: #0b67c2;
+}
+.activity > h6:hover {
+	text-decoration: underline;
 }
