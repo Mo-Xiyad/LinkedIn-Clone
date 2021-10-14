@@ -9,7 +9,7 @@ import { Container, Row } from "react-bootstrap";
 export default function Homepage({ authorized, profile }) {
   return (
     <Container className="homepage">
-      <Sidebar />
+      <Sidebar authorized={authorized} />
       <Feed authorized={authorized} profile={profile} />
       <Widget />
     </Container>

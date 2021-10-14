@@ -37,7 +37,7 @@ function EditpostModel({ show, setShow, authorized, postId }) {
         `https://striveschool-api.herokuapp.com/api/posts/${postId}`,
         {
           method: "PUT",
-          body: JSON.stringify({ ...values, text: values.text }),
+          body: JSON.stringify(values),
           headers: {
             "Content-Type": "application/json",
             Authorization:
@@ -83,7 +83,7 @@ function EditpostModel({ show, setShow, authorized, postId }) {
           <Form.Control
             as="textarea"
             value={values.text}
-            onChange={(e) => setValues(e.target.value)}
+            onChange={(e) => setValues({ ...values, text: e.target.value })}
           />
         </Form.Group>
       </Modal.Body>
