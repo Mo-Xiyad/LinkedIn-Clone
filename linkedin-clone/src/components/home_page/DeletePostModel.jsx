@@ -28,7 +28,7 @@ function DeletePostModel({ showDelete, setShowDelete, postId }) {
   }, [postId]);
 
   return (
-    <Modal showDelete={showDelete} onHide={() => setShowDelete(false)}>
+    <Modal show={showDelete} onHide={() => setShowDelete(false)}>
       <Modal.Header closeButton>
         <Modal.Title>Delete post?</Modal.Title>
       </Modal.Header>
