@@ -52,3 +52,25 @@
   max-height: auto;
   overflow: hidden;
 }
+
+/* Here is the three dotted drop down */
+.post-edit {
+  position: absolute;
+  font-weight: 600;
+  right: 9px;
+  top: 8px;
+}
+.post-edit button {
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  background-color: transparent !important;
+  border: none;
+}
+.post-edit button:hover {
+  background-color: transparent !important;
+}
+.dropdown-menu:hover {
+  background-color: #eeeeee !important;
+}
+/* END of three dot Dropdown */

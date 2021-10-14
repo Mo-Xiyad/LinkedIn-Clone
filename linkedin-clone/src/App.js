@@ -25,6 +25,7 @@ import { fetchData } from "./assats/js";
 function App() {
   const [authorized, setAuthorized] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [profile, setProfile] = useState(null);
 
   useEffect(() => {
     let getData = async () => {
@@ -35,7 +36,7 @@ function App() {
     getData();
   }, []);
 
-  console.log({ authorized });
+  // console.log({ authorized });
   return (
     <div className="App">
       {authorized && !isLoading && (
@@ -44,13 +45,20 @@ function App() {
           <Route
             path="/"
             exact={true}
-            render={(props) => <HomePage {...props} authorized={authorized} />}
+            render={(props) => (
+              <HomePage {...props} profile={profile} authorized={authorized} />
+            )}
           />
           <Route
             path="/profile/:userId"
             exact={true}
             render={(props) => (
-              <InnerLayout {...props} authorized={authorized} />
+              <InnerLayout
+                {...props}
+                authorized={authorized}
+                profile={profile}
+                setProfile={setProfile}
+              />
             )}
           />
           {/* FOOTER HERE */}

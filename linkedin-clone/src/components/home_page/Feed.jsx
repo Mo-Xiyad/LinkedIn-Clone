@@ -10,7 +10,7 @@ import ArticleIcon from "@mui/icons-material/Article";
 import Post from "./Post";
 import PostModel from "./PostModel";
 
-export default function Feed({ authorized }) {
+export default function Feed({ authorized, profile }) {
   const [show, setShow] = useState(false);
 
   const [posts, setPosts] = useState([]);
@@ -81,7 +81,7 @@ export default function Feed({ authorized }) {
         </div>
 
         <div className="postfeed">
-          <Post posts={posts} />
+          <Post posts={posts} profile={profile} authorized={authorized} />
         </div>
       </div>
     </>

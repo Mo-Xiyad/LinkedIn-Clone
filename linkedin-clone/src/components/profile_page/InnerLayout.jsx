@@ -9,9 +9,8 @@ import YourDashboard from "./Yourdashboard";
 import Activity from "./Activity";
 import Experience from "./Experience";
 
-const InnerLayout = ({ authorized }) => {
+const InnerLayout = ({ authorized, setProfile, profile }) => {
   const params = useParams();
-  const [profile, setProfile] = useState(null);
 
   const fetchUser = async () => {
     console.log("fetching profile");
