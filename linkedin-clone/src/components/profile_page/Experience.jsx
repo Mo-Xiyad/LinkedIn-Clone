@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import Edu_list from './Edu_list';
 import AddIcon from '@mui/icons-material/Add';
-import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
+import { Modal, Button } from 'react-bootstrap';
+import Experiance_model from './Experiance_mode';
 
 export default function Experience({ authorized }) {
 	const params = useParams();
@@ -35,6 +36,7 @@ export default function Experience({ authorized }) {
 
 	return (
 		<div className="experience">
+			<Experiance_model />;
 			<div className="adding_exp">
 				<h5 className="experience_title">Experience</h5>
 				<div className="experience-button">
@@ -43,7 +45,6 @@ export default function Experience({ authorized }) {
 					</button>
 				</div>
 			</div>
-
 			{experiences.map((experience) => (
 				<div className="experience_list">
 					<img
@@ -58,7 +59,6 @@ export default function Experience({ authorized }) {
 					<hr />
 				</div>
 			))}
-
 			<div className="edu_list">
 				<div className="adding_edu">
 					<h5 className="edu_list_title">Education</h5>

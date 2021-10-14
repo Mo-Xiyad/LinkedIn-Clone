@@ -3,9 +3,11 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Skil_list from './Skil_list';
 import AddIcon from '@mui/icons-material/Add';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
+import Edu_mode from './Edu_mode';
 export default function Skills_endorsements() {
 	return (
 		<div className="skills_endorsements">
+			<Edu_mode />
 			<div className="adding_edu">
 				<h4 className="endorsements_title">Skills & endorsements</h4>
 				<div className="skills-button">
