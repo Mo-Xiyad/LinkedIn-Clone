@@ -4,6 +4,7 @@ import TurnedInIcon from "@mui/icons-material/TurnedIn";
 import AssistantPhotoIcon from "@mui/icons-material/AssistantPhoto";
 import Hidden from "@mui/material/Hidden";
 import { Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function Sidebar({ authorized }) {
   const recentitem = (text) => (
@@ -24,7 +25,10 @@ export default function Sidebar({ authorized }) {
           <div className="sidebar-user-profile-img mb-3">
             <Image class="img-fluid" src={authorized.image} />
           </div>
-          <h3>{authorized.name}</h3>
+          <Link to={"/profile/me"}>
+            <h3>{authorized.name}</h3>
+          </Link>
+
           <h5>{authorized.title}</h5>
         </div>
 
