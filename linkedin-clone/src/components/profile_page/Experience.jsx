@@ -70,11 +70,17 @@ export default function Experience({ authorized }) {
 						</div>
 
 						<div className="input_comp_name">
-							<label>Company name*</label>
-							<Form.Control
-								type="text"
-								placeholder="Ex: Retail Selse Manager"
-							/>
+							<label>Employment type</label>
+							<Form.Control as="select">
+								<option>Please select</option>
+								<option>Full-time</option>
+								<option>Part-time</option>
+								<option>Self-employed</option>
+								<option>Freelance</option>
+								<option>Contract</option>
+								<option>Internship</option>
+								<option>Apprenticeship</option>
+							</Form.Control>
 							<label>Country-specific employment types</label>
 						</div>
 
@@ -82,8 +88,13 @@ export default function Experience({ authorized }) {
 							<label>Location</label>
 							<Form.Control
 								type="text"
-								placeholder="Ex: Retail Selse Manager"
+								placeholder="Ex: London, United Kingdom"
 							/>
+						</div>
+						<h5>learn more</h5>
+						<div className="input_Company_name ">
+							<label>Company name </label>
+							<Form.Control type="text" placeholder="Ex: Microsoft" />
 						</div>
 						<Form.Check
 							type="checkbox"
@@ -120,25 +131,16 @@ export default function Experience({ authorized }) {
 							</div>
 						</div>
 
-						{/* <div className="input_date">
-							<label>Date gose here</label>
-							<DatePicker value={dateval}></DatePicker>
-							<label>Country-specific employment types</label>
-						</div> */}
-
 						<div className="input_headline">
 							<label>Headline</label>
-							<Form.Control
-								type="text"
-								placeholder="Ex: Retail Selse Manager"
-							/>
+							<Form.Control type="text" placeholder="Ex: Web Developer" />
 						</div>
 
 						<div className="input_industry">
 							<label>Industry*</label>
 							<Form.Control
 								type="text"
-								placeholder="Ex: Retail Selse Manager"
+								placeholder="Ex: Architecture & Planning"
 							/>
 							<label>
 								LinkedIn uses industry information to provide more relevant

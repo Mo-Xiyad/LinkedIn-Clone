@@ -3,6 +3,8 @@
 	color: gray;
 	font-size: 80%;
 	font-weight: 300;
+	position: sticky;
+	top: 350px;
 }
 .footer > * p{
     cursor: pointer;

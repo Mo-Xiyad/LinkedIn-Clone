@@ -12,6 +12,7 @@ import './assats/css/profile_page css/Interests.css';
 import './assats/css/profile_page css/Footer_big.css';
 import './assats/css/profile_page css/Skills_endorsements.css';
 import './assats/css/profile_page css/Experiance_mode.css';
+import './assats/css/profile_page css/ProfileModel.css';
 import './assats/css/home_page css/Feed.css';
 import './assats/css/home_page css/Sidebar.css';
 import './assats/css/home_page css/Widget.css';

@@ -1,12 +1,15 @@
 .App {
 	background-color: #f3f2ef;
 }
-.header {
+.w-100{
 	position: sticky;
-	max-width: 1400px;
 	top: 0px;
+}
+.header {
+	
+	max-width: 1400px;
 	z-index: 999;
-	background: rgb(255, 255, 255);
+	background: #ffffff;
 	height: 50px;
 	display: flex;
 	justify-content: space-between;
