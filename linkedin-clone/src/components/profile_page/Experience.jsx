@@ -9,12 +9,19 @@ import "react-datepicker/dist/react-datepicker.css";
 export default function Experience({ authorized }) {
   const params = useParams();
   const [experiences, setExperiences] = useState([]);
-  const [experienceData, setExperienceData] = useState(experiences);
+  const [experienceData, setExperienceData] = useState({
+    role: "",
+    company: "",
+    startDate: new Date(),
+    endDate: new Date(),
+    description: "",
+    area: "",
+  });
 
   //   Getting the exisiting user experience
 
   const fetchData = async () => {
-    const id = params.userId === "me" ? authorized.userId : params.userId;
+    const id = params.userId === "me" ? authorized._id : params.userId;
     try {
       const response = await fetch(
         ` https://striveschool-api.herokuapp.com/api/profile/${id}/experiences`,
@@ -27,6 +34,7 @@ export default function Experience({ authorized }) {
       );
       if (response.ok) {
         const data = await response.json();
+
         setExperiences(data);
 
         console.log({ data });
@@ -40,7 +48,7 @@ export default function Experience({ authorized }) {
   const postExperience = async () => {
     try {
       let responce = await fetch(
-        `https:striveschool-api.herokuapp.com/api/profile/${authorized._id}/experiences`,
+        `https://striveschool-api.herokuapp.com/api/profile/${authorized._id}/experiences`,
         {
           method: "POST",
           body: JSON.stringify(experienceData),
@@ -51,6 +59,7 @@ export default function Experience({ authorized }) {
           },
         }
       );
+
       if (responce.ok) {
         setWorkModel(false);
       }
@@ -107,7 +116,11 @@ export default function Experience({ authorized }) {
               <label>Location</label>
               <Form.Control
                 type="text"
+                valaue={experienceData.area}
                 placeholder="Ex: Retail Selse Manager"
+                onChange={(e) =>
+                  setExperienceData({ ...experienceData, area: e.target.value })
+                }
               />
             </div>
             <Form.Check
@@ -191,10 +204,10 @@ export default function Experience({ authorized }) {
                   as="textarea"
                   rows={3}
                   value={experienceData.description}
-                  onChange={(date) =>
+                  onChange={(e) =>
                     setExperienceData({
                       ...experienceData,
-                      description: date,
+                      description: e.target.value,
                     })
                   }
                 />
@@ -218,7 +231,7 @@ export default function Experience({ authorized }) {
           </div>
         </Modal.Body>
         <Modal.Footer className="footer_button">
-          <Button>
+          <Button onClick={() => postExperience()}>
             <h5> Save </h5>
           </Button>
         </Modal.Footer>
