@@ -2,6 +2,8 @@ import { Avatar } from '@material-ui/core';
 import React from 'react';
 import TurnedInIcon from '@mui/icons-material/TurnedIn';
 import AssistantPhotoIcon from '@mui/icons-material/AssistantPhoto';
+import Hidden from '@mui/material/Hidden';
+
 export default function Sidebar(props) {
 	const recentitem = (text) => (
 		<div className="recentitembox">
@@ -34,32 +36,34 @@ export default function Sidebar(props) {
 						<h6 className="text">Who viewed you</h6>
 						<h6 className="number">21</h6>
 					</div>
-
-					<div className="textclass_2">
-						<h6>
-							<AssistantPhotoIcon color="success" />
-							Try Premium for free
-						</h6>
-					</div>
-					<div className="textclass_2">
-						<h6>
-							<TurnedInIcon /> My items
-						</h6>
-					</div>
+					<Hidden smDown>
+						<div className="textclass_2">
+							<h6>
+								<AssistantPhotoIcon color="success" />
+								Try Premium for free
+							</h6>
+						</div>
+						<div className="textclass_2">
+							<h6>
+								<TurnedInIcon /> My items
+							</h6>
+						</div>
+					</Hidden>
 				</div>
 			</div>
-
-			<div className="sidebar_recent">
-				<h5>Recent</h5>
-				<div>
-					{recentitem('Lorem ipsum dolor sit amet ')}
-					{recentitem('Praesentium, placeat? Veritatis, quia!')}
-					{recentitem('laborum temporibus nam hic')}
-					{recentitem('Lorem ipsum dolor sit amet ')}
-					{recentitem('Praesentium, placeat? Veritatis, quia!')}
-					{recentitem('laborum temporibus nam hic')}
+			<Hidden smDown>
+				<div className="sidebar_recent">
+					<h5>Recent</h5>
+					<div>
+						{recentitem('Lorem ipsum dolor sit amet ')}
+						{recentitem('Praesentium, placeat? Veritatis, quia!')}
+						{recentitem('laborum temporibus nam hic')}
+						{recentitem('Lorem ipsum dolor sit amet ')}
+						{recentitem('Praesentium, placeat? Veritatis, quia!')}
+						{recentitem('laborum temporibus nam hic')}
+					</div>
 				</div>
-			</div>
+			</Hidden>
 		</div>
 	);
 }

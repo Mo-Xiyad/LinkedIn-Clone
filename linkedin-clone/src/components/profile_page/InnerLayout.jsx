@@ -1,4 +1,4 @@
-import { Col, Jumbotron, Row, Spinner } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Outterlayout from "./Outterlayout";
 import Aside from "./Aside";
 import Headerinfo from "./Headerinfo";
@@ -8,6 +8,9 @@ import { useParams } from "react-router-dom";
 import YourDashboard from "./Yourdashboard";
 import Activity from "./Activity";
 import Experience from "./Experience";
+import Interests from "./Interests";
+import Skills_endorsements from "./Skills_endorsements";
+import Footer_big from "./Footer_big";
 
 const InnerLayout = ({ authorized, setProfile, profile }) => {
   const params = useParams();
@@ -28,8 +31,8 @@ const InnerLayout = ({ authorized, setProfile, profile }) => {
   console.log({ profile });
 
   return (
-    <Outterlayout>
-      <div className=" col-sm-6 col-md-7 col-lg-8">
+    <Container className="profil_page">
+      <div className="profil_container">
         {profile && (
           <>
             <Headerinfo
@@ -40,15 +43,14 @@ const InnerLayout = ({ authorized, setProfile, profile }) => {
             <YourDashboard />
             <Activity />
             <Experience authorized={authorized} />
-            {/* use this area o add other COMPONENTS  */}
-            {/* SKILLS  */}
-            {/* ANDOSMENT  */}
+            <Skills_endorsements />
+            <Interests />
           </>
         )}
       </div>
-      {/* Side bar will be inserted here */}
       <Aside />
-    </Outterlayout>
+      <Footer_big />
+    </Container>
   );
 };
 

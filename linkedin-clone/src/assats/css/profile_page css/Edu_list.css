@@ -10,7 +10,7 @@
 	color: rgb(126, 126, 126);
 	padding-top: 10px;
 	margin-left: 20px;
-	margin-bottom: 20px;
+	display: inline;
 }
 .edu_list_list > img {
 	margin-left: 20px;
@@ -21,6 +21,7 @@
 .edu_list_list {
 	display: flex;
 	flex-direction: row;
+	padding-bottom: 30px;
 }
 .edu_list_list_txt {
 	margin-left: 10px;
@@ -43,15 +44,27 @@
 .edu_list_list_txt > p:first-of-type {
 	color: rgb(0, 0, 0);
 }
-.edu_list_list {
-	padding-bottom: 30px;
-	padding-top: 30px;
-	border-bottom: 1px solid rgb(194, 194, 194);
-}
 .edu_list > .edu_list_list:first-of-type {
 	padding-top: 0px;
 }
 
 .edu_list_list_txt:hover {
 	text-decoration: underline;
+}
+.adding_edu {
+	display: flex;
+	justify-content: space-between;
+}
+.education-button {
+	margin-top: 0px !important;
+	border-radius: 50%;
+	padding: 8px;
+	background-color: rgb(255, 255, 255);
+	margin-left: 20px;
+	border: 0px;
+	color: #9c9c9c;
+	cursor: pointer;
+}
+.education-button:hover {
+	background-color: rgb(230, 230, 230);
 }

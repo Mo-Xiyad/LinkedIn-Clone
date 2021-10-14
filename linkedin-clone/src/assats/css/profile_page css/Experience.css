@@ -7,6 +7,7 @@
 }
 
 .experience_title {
+	font-size: 160%;
 	color: rgb(126, 126, 126);
 	padding-top: 20px;
 	margin-left: 20px;
@@ -22,7 +23,6 @@
 	display: flex;
 	flex-direction: row;
 	padding-bottom: 20px;
-	border-bottom: 1px solid rgb(194, 194, 194);
 }
 .experience_list_txt {
 	margin-left: 10px;
@@ -49,4 +49,37 @@
 
 .experience_list_txt:hover {
 	text-decoration: underline;
+}
+.adding_exp {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.profile-button{
+	border-radius: 20px;
+	background-color: rgb(255, 255, 255);
+	margin-right: 20px;
+	margin-left: 20px;
+	border: 0px;
+	color: #2d7dcb;
+	cursor: pointer;
+
+}
+
+.experience_title{
+	display: inline;
+}
+
+.experience-button > button {
+	margin-top: 20px !important;
+	border-radius: 50%;
+	padding: 8px;
+	background-color: rgb(255, 255, 255);
+	margin-left: 20px;
+	border: 0px;
+	color: #9c9c9c;
+	cursor: pointer;
+}
+.experience-button > button:hover {
+	background-color: rgb(230, 230, 230);
 }

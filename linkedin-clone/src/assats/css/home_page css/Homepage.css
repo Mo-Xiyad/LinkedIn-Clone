@@ -1,16 +1,21 @@
 .homepage {
 	display: flex;
-	margin-left: 386px;
-	margin-right: 385px;
+	flex-direction: row;
+	max-width: 1400px;
+}
+.homepage > .row {
+	display: flex;
+	margin: 0;
+	flex-wrap: nowrap;
 }
 .feeds {
 	flex-basis: 50%;
+	margin-top: 25px;
 }
 .wiges {
 	margin-top: 25px;
 	flex-basis: 29%;
 	margin-left: 19px;
-	
 }
 .sidebar {
 	margin-top: 25px;
@@ -22,12 +27,24 @@
 }
 @media (max-width: 570px) {
 }
-@media (max-width: 768px) {
-}
-@media (max-width: 922px) {
+@media (max-width: 720px) {
 	.homepage {
-		margin-left: 300px;
-		margin-right: 300px;
+		display: flex;
+		flex-direction: column;
+	}
+	.feeds {
+		flex-basis: 100%;
+	}
+	.sidebar {
+		flex-basis: 100%;
+	}
+}
+@media (max-width: 960px) {
+	.feeds {
+		flex-basis: 70%;
+	}
+	.sidebar {
+		flex-basis: 30%;
 	}
 	.wiges {
 		display: none;
