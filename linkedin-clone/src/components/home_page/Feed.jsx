@@ -9,6 +9,7 @@ import DateRangeIcon from "@mui/icons-material/DateRange";
 import ArticleIcon from "@mui/icons-material/Article";
 import Post from "./Post";
 import PostModel from "./PostModel";
+import PostPictureModel from "./PostPictureModel";
 
 export default function Feed({ authorized, profile }) {
   const [show, setShow] = useState(false);
@@ -53,6 +54,7 @@ export default function Feed({ authorized, profile }) {
         getdata={getdata}
         authorized={authorized}
       />
+      ;
       <div className="feeds">
         <div className="feeding">
           <div className="posting_area">
