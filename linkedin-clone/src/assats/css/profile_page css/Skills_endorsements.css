@@ -19,6 +19,36 @@
 	color: #2d7dcb;
 	cursor: pointer;
 }
+.skills-button > button {
+	margin-top: 20px !important;
+	border-radius: 50%;
+	padding: 8px;
+	background-color: rgb(255, 255, 255);
+	margin-left: 20px;
+	border: 0px;
+	color: #9c9c9c;
+	cursor: pointer;
+}
+.skills-button > :hover {
+	background-color: rgb(230, 230, 230);
+}
+.skills-button > h5 {
+	display: inline;
+	color: rgb(151, 151, 151);
+}
+.skills-button > button {
+	margin-top: 20px !important;
+	border-radius: 50%;
+	padding: 8px;
+	background-color: rgb(255, 255, 255);
+	margin-left: 20px;
+	border: 0px;
+	color: #9c9c9c;
+	cursor: pointer;
+}
+.skills-button > :hover {
+	background-color: rgb(230, 230, 230);
+}
 .skills_endorsements > button > h5 {
 	margin-bottom: 0px;
 	padding-left: 16px;

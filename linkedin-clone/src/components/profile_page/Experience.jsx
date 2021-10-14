@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import Edu_list from './Edu_list';
 import AddIcon from '@mui/icons-material/Add';
+import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
+
 export default function Experience({ authorized }) {
 	const params = useParams();
 	const [experiences, setExperiences] = useState([]);
@@ -33,10 +35,14 @@ export default function Experience({ authorized }) {
 
 	return (
 		<div className="experience">
-			{/* <div className="adding_exp">
-			</div> */}
-			<h5 className="experience_title">Experience</h5>
-			<AddIcon />
+			<div className="adding_exp">
+				<h5 className="experience_title">Experience</h5>
+				<div className="experience-button">
+					<button>
+						<AddIcon fontSize="large" />
+					</button>
+				</div>
+			</div>
 
 			{experiences.map((experience) => (
 				<div className="experience_list">
@@ -54,7 +60,12 @@ export default function Experience({ authorized }) {
 			))}
 
 			<div className="edu_list">
-				<h5 className="edu_list_title">Education</h5>
+				<div className="adding_edu">
+					<h5 className="edu_list_title">Education</h5>
+					<div className="education-button">
+						<AddIcon fontSize="large" />
+					</div>
+				</div>
 				<Edu_list />
 			</div>
 		</div>

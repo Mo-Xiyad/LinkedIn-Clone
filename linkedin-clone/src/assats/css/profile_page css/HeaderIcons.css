@@ -8,6 +8,7 @@
 }
 .headericons:hover {
 	color: black;
+	text-decoration: underline;
 }
 .header_title {
 	font-size: 12px;
@@ -18,4 +19,3 @@
 	height: 25px !important;
 	width: 25px !important;
 }
-
