@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import Edu_list from './Edu_list';
 import AddIcon from '@mui/icons-material/Add';
-import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
+import { Modal, Button } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
 
 export default function Experience({ authorized }) {
 	const params = useParams();
@@ -32,18 +33,211 @@ export default function Experience({ authorized }) {
 	useEffect(() => {
 		fetchData();
 	}, [params.userId]);
-
+	const [Modelopner, setModelopner] = useState(false);
+	function handelModelShow() {
+		setModelopner(true);
+	}
+	function handelModelClose() {
+		setModelopner(false);
+	}
+	const [ModelopnerEdu, setModelopnerEdu] = useState(false);
+	function handelModelShowEdu() {
+		setModelopnerEdu(true);
+	}
+	function handelModelCloseEdu() {
+		setModelopnerEdu(false);
+	}
 	return (
 		<div className="experience">
+			{/* jkjkjkjkjkj */}
+
+			<Modal size="lg" show={Modelopner} onHide={handelModelClose}>
+				<Modal.Header onClick={handelModelClose} closeButton>
+					<Modal.Title id="contained-modal-title-vcenter">
+						Add experience
+					</Modal.Title>
+				</Modal.Header>
+				<Modal.Body class="from__body">
+					<div className="input_form">
+						<div className="input_title">
+							<label>Title*</label>
+							<Form.Control
+								type="text"
+								placeholder="Ex: Retail Selse Manager"
+							/>
+						</div>
+
+						<div className="input_comp_name">
+							<label>Company name*</label>
+							<Form.Control
+								type="text"
+								placeholder="Ex: Retail Selse Manager"
+							/>
+							<label>Country-specific employment types</label>
+						</div>
+
+						<div className="input_city">
+							<label>Location</label>
+							<Form.Control
+								type="text"
+								placeholder="Ex: Retail Selse Manager"
+							/>
+							<Form.Check
+								type="checkbox"
+								label="I am currently working in this role"
+							/>
+						</div>
+
+						{/* <div className="input_date">
+							<label>Date gose here</label>
+							<DatePicker value={dateval}></DatePicker>
+							<label>Country-specific employment types</label>
+						</div> */}
+
+						<div className="input_headline">
+							<label>Headline</label>
+							<Form.Control
+								type="text"
+								placeholder="Ex: Retail Selse Manager"
+							/>
+						</div>
+
+						<div className="input_industry">
+							<label>Industry*</label>
+							<Form.Control
+								type="text"
+								placeholder="Ex: Retail Selse Manager"
+							/>
+							<label>
+								LinkedIn uses industry information to provide more relevant
+								recommendations
+							</label>
+						</div>
+
+						<div className="input_description">
+							<label>Description</label>
+							<Form.Group
+								className="mb-3"
+								controlId="exampleForm.ControlTextarea1"
+							>
+								<Form.Control
+									class="input_description_text"
+									as="textarea"
+									rows={3}
+								/>
+							</Form.Group>
+						</div>
+
+						<div className="input_last">
+							<h5>Media</h5>
+							<h6>
+								Add or link to external documents, photos, sites, videos, and
+								presentations.
+							</h6>
+							<h6>Learn more</h6>
+							<button>
+								<h5>
+									<AddIcon />
+									Add Meddia
+								</h5>
+							</button>
+						</div>
+					</div>
+				</Modal.Body>
+				<Modal.Footer className="footer_button">
+					<Button>
+						<h5> Save </h5>
+					</Button>
+				</Modal.Footer>
+			</Modal>
+			<Modal size="lg" show={ModelopnerEdu} onHide={handelModelCloseEdu}>
+				<Modal.Header onClick={handelModelCloseEdu} closeButton>
+					<Modal.Title id="contained-modal-title-vcenter">
+						Add education
+					</Modal.Title>
+				</Modal.Header>
+				<Modal.Body class="from__body">
+					<div className="input_form">
+						<div className="input_title">
+							<label>School*</label>
+							<Form.Control type="text" placeholder="Ex: Strive School" />
+						</div>
+
+						<div className="input_comp_name">
+							<label>Degree</label>
+							<Form.Control type="text" placeholder="Ex: Bachelor's" />
+						</div>
+
+						<div className="input_city">
+							<label>Field of study </label>
+							<Form.Control type="text" placeholder="Ex: Business" />
+						</div>
+
+						<div className="input_headline">
+							<label>Grade</label>
+							<Form.Control type="text" placeholder="Ex: 3.5" />
+						</div>
+
+						<div className="input_description">
+							<label>Activities and societies</label>
+							<Form.Group
+								className="mb-3"
+								controlId="exampleForm.ControlTextarea1"
+							>
+								<Form.Control
+									class="input_description_text"
+									as="textarea"
+									rows={3}
+								/>
+							</Form.Group>
+						</div>
+
+						<div className="input_description">
+							<label>Description</label>
+							<Form.Group
+								className="mb-3"
+								controlId="exampleForm.ControlTextarea1"
+							>
+								<Form.Control
+									class="input_description_text"
+									as="textarea"
+									rows={3}
+								/>
+							</Form.Group>
+						</div>
+
+						<div className="input_last">
+							<h5>Media</h5>
+							<h6>
+								Add or link to external documents, photos, sites, videos, and
+								presentations.
+							</h6>
+							<h6>Learn more</h6>
+							<br />
+							<button>
+								<h5>
+									<AddIcon />
+									Add Meddia
+								</h5>
+							</button>
+						</div>
+					</div>
+				</Modal.Body>
+				<Modal.Footer className="footer_button">
+					<Button>
+						<h5> Save </h5>
+					</Button>
+				</Modal.Footer>
+			</Modal>
+
 			<div className="adding_exp">
 				<h5 className="experience_title">Experience</h5>
 				<div className="experience-button">
-					<button>
+					<button onClick={handelModelShow}>
 						<AddIcon fontSize="large" />
 					</button>
 				</div>
 			</div>
-
 			{experiences.map((experience) => (
 				<div className="experience_list">
 					<img
@@ -58,12 +252,11 @@ export default function Experience({ authorized }) {
 					<hr />
 				</div>
 			))}
-
 			<div className="edu_list">
 				<div className="adding_edu">
 					<h5 className="edu_list_title">Education</h5>
 					<div className="education-button">
-						<AddIcon fontSize="large" />
+						<AddIcon onClick={handelModelShowEdu} fontSize="large" />
 					</div>
 				</div>
 				<Edu_list />
