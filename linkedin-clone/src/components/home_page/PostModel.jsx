@@ -8,6 +8,9 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import ChatIcon from '@mui/icons-material/Chat';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import Postinput from './Postinput';
+import Hidden from '@mui/material/Hidden';
 function ProfileModal({ show, setShow, authorized, getdata }) {
 	const [values, setValues] = useState();
 
@@ -47,7 +50,7 @@ function ProfileModal({ show, setShow, authorized, getdata }) {
 		<Modal
 			dialogClassName="posting_model"
 			size="lg"
-			show={true}
+			show={show}
 			onHide={() => setShow(false)}
 		>
 			<Modal.Header closeButton>
@@ -92,35 +95,39 @@ function ProfileModal({ show, setShow, authorized, getdata }) {
 			<Modal.Footer className="posting_model_footer_cont">
 				<div className="posting_model_footer_group_btn_1">
 					<div>
-						<ChatIcon color="#666666" />
+						<PanoramaIcon fontSize="large" style={{ color: '#666666' }} />
 					</div>
 
 					<div>
-						<ChatIcon  />
+						<YouTubeIcon fontSize="large" style={{ color: '#666666' }} />
 					</div>
 
 					<div>
-						<ChatIcon />
-					</div>
-					<div>
-						<ChatIcon />
+						<DescriptionIcon fontSize="large" style={{ color: '#666666' }} />
 					</div>
 
 					<div>
-						<ChatIcon />
+						<BusinessCenterIcon fontSize="large" style={{ color: '#666666' }} />
 					</div>
 
 					<div>
-						<ChatIcon />
+						<Brightness7Icon fontSize="large" style={{ color: '#666666' }} />
 					</div>
 
 					<div>
-						<ChatIcon />
+						<EqualizerIcon fontSize="large" style={{ color: '#666666' }} />
+					</div>
+
+					<div >
+						<MoreHorizIcon fontSize="large" style={{ color: '#666666' }} />
 					</div>
 				</div>
+
 				<div className="posting_model_footer_group_btn_2">
-					<ChatIcon />
+					<ChatIcon style={{ color: '#666666' }} />
+					Anyone
 				</div>
+
 				<Button
 					className="posting_model_post_btn"
 					variant="primary"
