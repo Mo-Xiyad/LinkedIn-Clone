@@ -5,7 +5,7 @@ import AddIcon from '@mui/icons-material/Add';
 
 export default function Edu_mode() {
 	return (
-		<Modal size="lg" show={true}>
+		<Modal size="lg" show={false}>
 			<Modal.Header closeButton>
 				<Modal.Title id="contained-modal-title-vcenter">
 					Add education
