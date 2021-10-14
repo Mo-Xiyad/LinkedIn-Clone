@@ -8,9 +8,13 @@ import MoreHorizRoundedIcon from "@mui/icons-material/MoreHorizRounded";
 import { Dropdown, DropdownButton, Button } from "react-bootstrap";
 import EditpostModel from "./EditpostModel";
 import DeletePostModel from "./DeletePostModel";
+import PostPictureModel from "./PostPictureModel";
 
 export default function Post({ profile, authorized, posts }) {
   const [show, setShow] = useState(false);
+
+  const [showPostPicture, setShowPostPicture] = useState(false);
+
   const [showDelete, setShowDelete] = useState(false);
 
   const [postId, setPostId] = useState();
@@ -19,6 +23,12 @@ export default function Post({ profile, authorized, posts }) {
   }, []);
   return (
     <>
+      <PostPictureModel
+        showPostPicture={showPostPicture}
+        setShowPostPicture={setShowPostPicture}
+        authorized={authorized}
+        postId={postId}
+      />
       <EditpostModel
         show={show}
         setShow={setShow}
@@ -63,6 +73,16 @@ export default function Post({ profile, authorized, posts }) {
                           }}
                         >
                           Delete
+                        </Dropdown.Item>
+                      )}
+                      {authorized._id === post.user._id && (
+                        <Dropdown.Item
+                          onClick={() => {
+                            setShowPostPicture(true);
+                            setPostId(post._id);
+                          }}
+                        >
+                          Post picture
                         </Dropdown.Item>
                       )}
                       <Dropdown.Item>Another action</Dropdown.Item>

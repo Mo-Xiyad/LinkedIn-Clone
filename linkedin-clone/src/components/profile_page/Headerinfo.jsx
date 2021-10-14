@@ -132,6 +132,7 @@ const Headerinfo = ({ profile, authorized, fetchUser }) => {
 
   return (
     <>
+      
       <EditModal
         show={show}
         setShow={setShow}

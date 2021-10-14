@@ -2,7 +2,11 @@ import React from 'react';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Skil_list from './Skil_list';
 import AddIcon from '@mui/icons-material/Add';
+import { Modal, Button } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
+import { useState, useEffect } from 'react';
+
 export default function Skills_endorsements() {
 	return (
 		<div className="skills_endorsements">
