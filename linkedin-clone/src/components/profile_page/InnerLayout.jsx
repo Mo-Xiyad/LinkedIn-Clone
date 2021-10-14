@@ -11,8 +11,6 @@ import Experience from './Experience';
 import Interests from './Interests';
 import Skills_endorsements from './Skills_endorsements';
 import Footer_big from './Footer_big';
-import Experiance_model from './Experiance_mode';
-import Edu_mode from './Edu_mode';
 const InnerLayout = ({ authorized, setProfile, profile }) => {
 	const params = useParams();
 
@@ -46,8 +44,6 @@ const InnerLayout = ({ authorized, setProfile, profile }) => {
 						<Experience authorized={authorized} />
 						<Skills_endorsements />
 						<Interests />
-						<Experiance_model />
-						<Edu_mode />
 					</>
 				)}
 			</div>

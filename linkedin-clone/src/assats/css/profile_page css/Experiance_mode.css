@@ -48,3 +48,16 @@
 	background-color: #004182;
 	border-radius: 25px;
 }
+.start_date {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.start_date > div {
+	display: flex;
+	flex-direction: column;
+}
+.start_date > div > form > div > div > input {
+	color: gray;
+	border-radius: 10px;
+}
