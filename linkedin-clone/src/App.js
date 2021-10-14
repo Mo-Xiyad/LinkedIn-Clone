@@ -15,6 +15,7 @@ import './assats/css/profile_page css/Experiance_mode.css';
 import './assats/css/profile_page css/ProfileMode.css';
 import './assats/css/home_page css/Feed.css';
 import './assats/css/home_page css/Sidebar.css';
+import './assats/css/home_page css/PostingModel.css';
 import './assats/css/home_page css/Widget.css';
 import './assats/css/home_page css/Homepage.css';
 import './assats/css/home_page css/Postinput.css';

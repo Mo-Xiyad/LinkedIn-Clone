@@ -28,7 +28,7 @@ function ProfileModal({ show, setShow, authorized, fetchUser }) {
 	};
 
 	return (
-		<Modal size="lg" show={show} onHide={() => setShow(false)}>
+		<Modal class="posting_model"size="lg" show={show} onHide={() => setShow(false)}>
 			<Modal.Header className="bigger_box" closeButton>
 				<Modal.Title>Edit intro</Modal.Title>
 			</Modal.Header>
