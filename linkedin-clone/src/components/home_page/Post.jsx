@@ -7,9 +7,12 @@ import MessageIcon from "@mui/icons-material/Message";
 import MoreHorizRoundedIcon from "@mui/icons-material/MoreHorizRounded";
 import { Dropdown, DropdownButton, Button } from "react-bootstrap";
 import EditpostModel from "./EditpostModel";
+import DeletePostModel from "./DeletePostModel";
 
 export default function Post({ profile, authorized, posts }) {
   const [show, setShow] = useState(false);
+  const [showDelete, setShowDelete] = useState(false);
+
   const [postId, setPostId] = useState();
   useEffect(() => {
     console.log(posts);
@@ -20,6 +23,11 @@ export default function Post({ profile, authorized, posts }) {
         show={show}
         setShow={setShow}
         authorized={authorized}
+        postId={postId}
+      />
+      <DeletePostModel
+        showDelete={showDelete}
+        setShowDelete={setShowDelete}
         postId={postId}
       />
 
@@ -45,6 +53,16 @@ export default function Post({ profile, authorized, posts }) {
                           }}
                         >
                           Edit
+                        </Dropdown.Item>
+                      )}
+                      {authorized._id === post.user._id && (
+                        <Dropdown.Item
+                          onClick={() => {
+                            setShowDelete(true);
+                            setPostId(post._id);
+                          }}
+                        >
+                          Delete
                         </Dropdown.Item>
                       )}
                       <Dropdown.Item>Another action</Dropdown.Item>
