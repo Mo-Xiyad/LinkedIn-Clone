@@ -3,12 +3,15 @@ import { useParams } from "react-router";
 import Edu_list from "./Edu_list";
 import AddIcon from "@mui/icons-material/Add";
 import { Modal, Button } from "react-bootstrap";
-import Form from "react-bootstrap/Form";
+import { Form } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+
 export default function Experience({ authorized }) {
   const params = useParams();
+
   const [experiences, setExperiences] = useState([]);
+
   const [experienceData, setExperienceData] = useState({
     role: "",
     company: "",
@@ -18,8 +21,15 @@ export default function Experience({ authorized }) {
     area: "",
   });
 
-  //   Getting the exisiting user experience
+  const [workModel, setWorkModel] = useState(false);
 
+  const [educationModel, setEducationModel] = useState(false);
+
+  const [dateSelected, setDateSelected] = useState(null);
+
+  const [enddateSelected, setEnddateSelected] = useState(null);
+
+  //   Getting the exisiting user experience
   const fetchData = async () => {
     const id = params.userId === "me" ? authorized._id : params.userId;
     try {
@@ -37,12 +47,16 @@ export default function Experience({ authorized }) {
 
         setExperiences(data);
 
-        console.log({ data });
+        console.log(`exp==================>`);
+        // console.log(data);
       }
     } catch (error) {
       console.log(error);
     }
   };
+
+  // getting image
+  const [image, setImage] = useState(null);
 
   //   Getting the exisiting user experience
   const postExperience = async () => {
@@ -61,7 +75,32 @@ export default function Experience({ authorized }) {
       );
 
       if (responce.ok) {
-        setWorkModel(false);
+        let data = await responce.json();
+        console.log(responce);
+        try {
+          let formdata = new FormData();
+          formdata.append("experience", image);
+
+          const response = await fetch(
+            `https://striveschool-api.herokuapp.com/api/profile/${authorized._id}/experiences/${data._id}/picture`,
+            {
+              method: "POST",
+              body: formdata,
+              headers: {
+                Authorization:
+                  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTY0OTE0M2E4OTBjYzAwMTVjZjA3ZjQiLCJpYXQiOjE2MzM5ODA3MzksImV4cCI6MTYzNTE5MDMzOX0.KuT_PgG7s0jzEK_t0MA93LSE7cV3svViPrJzVXJeJ-o",
+              },
+            }
+          );
+          console.log(`before the imagepost`);
+          if (response.ok) {
+            console.log(`inside the if after the image post`);
+          }
+          console.log(`before closing the model`);
+          setWorkModel(false);
+        } catch (error) {
+          console.log(error);
+        }
       }
     } catch (error) {}
   };
@@ -70,13 +109,6 @@ export default function Experience({ authorized }) {
     fetchData();
   }, [params.userId]);
 
-  const [workModel, setWorkModel] = useState(false);
-
-  const [educationModel, setEducationModel] = useState(false);
-
-  const [dateSelected, setDateSelected] = useState(null);
-
-  const [enddateSelected, setEnddateSelected] = useState(null);
   return (
     <div className="experience">
       {/* ------Experience_model--------> */}
@@ -132,8 +164,8 @@ export default function Experience({ authorized }) {
                 <div>
                   <label>Start date*</label>
                   <Form>
-                    startDate
                     <DatePicker
+                      selected={experienceData.startDate}
                       value={experienceData.startDate}
                       onChange={(date) =>
                         setExperienceData({
@@ -151,6 +183,7 @@ export default function Experience({ authorized }) {
                   <label>End date*</label>
                   <Form>
                     <DatePicker
+                      selected={experienceData.endDate}
                       value={experienceData.endDate}
                       onChange={(date) =>
                         setExperienceData({
@@ -166,12 +199,6 @@ export default function Experience({ authorized }) {
                 </div>
               </div>
             </div>
-
-            {/* <div className="input_date">
-							<label>Date gose here</label>
-							<DatePicker value={dateval}></DatePicker>
-							<label>Country-specific employment types</label>
-						</div> */}
 
             <div className="input_headline">
               <label>Headline</label>
@@ -227,6 +254,12 @@ export default function Experience({ authorized }) {
                   Add Meddia
                 </h5>
               </button>
+              {/* ==================== IMGAE INPUT  */}
+              <Form.Control
+                type="file"
+                onChange={(e) => setImage(e.target.files[0])}
+              />
+              {/* ==================== END IMGAE INPUT  */}
             </div>
           </div>
         </Modal.Body>
@@ -370,6 +403,11 @@ export default function Experience({ authorized }) {
           <div className="experience_list_txt">
             <h5>{experience.role}</h5>
             <p>{experience.company}</p>
+            <p>{experience.startDate}</p>
+            <p>{experience.endDate}</p>
+            <p>{experience.description}</p>
+            <p>{experience.area}</p>
+            {/* <p>{experience._id}</p> */}
           </div>
           <hr />
         </div>
