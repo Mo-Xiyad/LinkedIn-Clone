@@ -28,72 +28,71 @@ function ProfileModal({ show, setShow, authorized, fetchUser }) {
 	};
 
 	return (
-		// <Modal show={show} onHide={() => setShow(false)}>
-		<Modal size="lg" show={true} onHide={() => setShow(false)}>
-			<Modal.Header closeButton>
+		<Modal size="lg" show={show} onHide={() => setShow(false)}>
+			<Modal.Header className="bigger_box" closeButton>
 				<Modal.Title>Edit intro</Modal.Title>
 			</Modal.Header>
-			<Modal.Body>
-				<div className="all_profile_inputs">
-					<div className="model_name_input">
-						<div>
-							<Form.Label>First Name*</Form.Label>
-							<Form.Control
-								value={values.name}
-								onChange={(e) => setValues({ ...values, name: e.target.value })}
-							/>
-						</div>
-						<div>
-							<Form.Label>Last Name*</Form.Label>
-							<Form.Control
-								value={values.name}
-								onChange={(e) => setValues({ ...values, name: e.target.value })}
-							/>
-						</div>
+			<Modal.Body className="all_profile_inputs">
+				<div className="model_name_input">
+					<div>
+						<Form.Label>First Name*</Form.Label>
+						<Form.Control
+							value={values.name}
+							onChange={(e) => setValues({ ...values, name: e.target.value })}
+						/>
 					</div>
-					<h5>Add former name</h5>
+					<div>
+						<Form.Label>Last Name*</Form.Label>
+						<Form.Control
+							value={values.name}
+							onChange={(e) => setValues({ ...values, name: e.target.value })}
+						/>
+					</div>
+				</div>
+				<h5>Add former name</h5>
 
+				<h6 className="passive_text">
+					<AddIcon />
+					Record-name pronunciation
+				</h6>
+
+				<p>Name pronunciation can only be added using our mobile app.</p>
+
+				<div className="model_Pronouns_input">
+					<Form.Label>Pronouns </Form.Label>
+					<Form.Control as="select">
+						<option>Please select</option>
+						<option>He/Him</option>
+						<option>She/Her</option>
+						<option>They/Them</option>
+					</Form.Control>
 					<h5>
-						<AddIcon />
-						Record-name pronunciation
-					</h5>
-
-					<h5>Name pronunciation can only be added using our mobile app.</h5>
-
-					<div className="model_Pronouns_input">
-						<div>
-							<Form.Label>Pronouns </Form.Label>
-							<Form.Control as="select">
-								<option>Please select</option>
-								<option>He/Him</option>
-								<option>She/Her</option>
-								<option>They/Them</option>
-							</Form.Control>
-							<h5>
-								<RemoveRedEyeIcon />
-								Visible to: All LinkedIn members
-							</h5>
-						</div>
-					</div>
-
-					<div className="model_headline_input">
-						<div>
-							<Form.Label>Headline </Form.Label>
-							<Form.Control placeholder="Web Developer" />
-						</div>
-					</div>
-
-					<h5>
-						<AddIcon />
-						Add current position.
+						<RemoveRedEyeIcon />
+						Visible to: All LinkedIn members
 					</h5>
 				</div>
-				<Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-					<Form.Label>Education</Form.Label>
-					<Form.Control placeholder="University of Applied Sciences" />
-					<Form.Label>Add new Education</Form.Label>
-					<Form.Check type="checkbox" label="Check me out" />
-				</Form.Group>
+
+				<div className="model_headline_input">
+					<div>
+						<Form.Label>Headline </Form.Label>
+						<Form.Control placeholder="Web Developer" />
+					</div>
+				</div>
+
+				<h5>
+					<AddIcon />
+					Add current position.
+				</h5>
+
+				<Form.Label>Education</Form.Label>
+				<Form.Control placeholder="University of Applied Sciences" />
+
+				<h6>Add new Education</h6>
+				<br />
+				<h4 className="check_me_out">
+					<Form.Check type="checkbox" />
+					Show education in my intro
+				</h4>
 
 				<Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
 					<Form.Label>Country/Region*</Form.Label>
