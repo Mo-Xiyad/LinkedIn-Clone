@@ -4,7 +4,8 @@ import Edu_list from './Edu_list';
 import AddIcon from '@mui/icons-material/Add';
 import { Modal, Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
-
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 export default function Experience({ authorized }) {
 	const params = useParams();
 	const [experiences, setExperiences] = useState([]);
@@ -47,10 +48,11 @@ export default function Experience({ authorized }) {
 	function handelModelCloseEdu() {
 		setModelopnerEdu(false);
 	}
+	const [dateSelected, setDateSelected] = useState(null);
+	const [enddateSelected, setEnddateSelected] = useState(null);
 	return (
 		<div className="experience">
-			{/* jkjkjkjkjkj */}
-
+			{/* ------Experience_model--------> */}
 			<Modal size="lg" show={Modelopner} onHide={handelModelClose}>
 				<Modal.Header onClick={handelModelClose} closeButton>
 					<Modal.Title id="contained-modal-title-vcenter">
@@ -82,10 +84,40 @@ export default function Experience({ authorized }) {
 								type="text"
 								placeholder="Ex: Retail Selse Manager"
 							/>
-							<Form.Check
-								type="checkbox"
-								label="I am currently working in this role"
-							/>
+						</div>
+						<Form.Check
+							type="checkbox"
+							label="I am currently working in this role"
+						/>
+						<div className="input_date">
+							<div className="start_date">
+								<div>
+									<label>Start date*</label>
+									<Form>
+										<DatePicker
+											value={dateSelected}
+											selected={dateSelected}
+											onChange={(date) => setDateSelected(date)}
+											isClearable
+											showYearDropdown
+											scrollableMonthYearDropdown
+										/>
+									</Form>
+								</div>
+								<div>
+									<label>End date*</label>
+									<Form>
+										<DatePicker
+											value={enddateSelected}
+											selected={enddateSelected}
+											onChange={(date) => setEnddateSelected(date)}
+											isClearable
+											showYearDropdown
+											scrollableMonthYearDropdown
+										/>
+									</Form>
+								</div>
+							</div>
 						</div>
 
 						{/* <div className="input_date">
@@ -150,6 +182,8 @@ export default function Experience({ authorized }) {
 					</Button>
 				</Modal.Footer>
 			</Modal>
+
+			{/* ------Education_model--------> */}
 			<Modal size="lg" show={ModelopnerEdu} onHide={handelModelCloseEdu}>
 				<Modal.Header onClick={handelModelCloseEdu} closeButton>
 					<Modal.Title id="contained-modal-title-vcenter">
@@ -171,6 +205,36 @@ export default function Experience({ authorized }) {
 						<div className="input_city">
 							<label>Field of study </label>
 							<Form.Control type="text" placeholder="Ex: Business" />
+						</div>
+						<div className="input_date">
+							<div className="start_date">
+								<div>
+									<label>Start date*</label>
+									<Form>
+										<DatePicker
+											value={dateSelected}
+											selected={dateSelected}
+											onChange={(date) => setDateSelected(date)}
+											isClearable
+											showYearDropdown
+											scrollableMonthYearDropdown
+										/>
+									</Form>
+								</div>
+								<div>
+									<label>End date*</label>
+									<Form>
+										<DatePicker
+											value={enddateSelected}
+											selected={enddateSelected}
+											onChange={(date) => setEnddateSelected(date)}
+											isClearable
+											showYearDropdown
+											scrollableMonthYearDropdown
+										/>
+									</Form>
+								</div>
+							</div>
 						</div>
 
 						<div className="input_headline">
