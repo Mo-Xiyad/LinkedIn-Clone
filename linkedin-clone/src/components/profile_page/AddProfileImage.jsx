@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Image, Modal, Button, Form } from 'react-bootstrap';
 import MultiMenus from '../../assats/css/profile_page css/profile-picUpdate-Model.css';
-import PanoramaIcon from '@mui/icons-material/Panorama';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import DoneIcon from '@mui/icons-material/Done';
 import PhotoSizeSelectActualOutlinedIcon from '@mui/icons-material/PhotoSizeSelectActualOutlined';
 function AddProfileImage({ picUpdate, setPicUpdate, authorized, fetchUser }) {
 	const [picture, setPicture] = useState(null);
@@ -70,8 +69,8 @@ function AddProfileImage({ picUpdate, setPicUpdate, authorized, fetchUser }) {
 				</label>
 
 				<Button className="final_btn__" onClick={() => uploadPicture()}>
-					<DeleteForeverIcon fontSize="large" />
-					<p> Delete </p>
+					<DoneIcon fontSize="large" />
+					<p> Post </p>
 				</Button>
 			</Modal.Footer>
 		</Modal>

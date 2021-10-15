@@ -40,3 +40,9 @@ input[type='file'] {
 	padding: 0px;
 	justify-content: space-evenly;
 }
+
+.final_btn__ :focus {
+	/* background-color: #1d2226 !important; */
+}
+
+/* .final_btn__.final_btn__:onclick */
