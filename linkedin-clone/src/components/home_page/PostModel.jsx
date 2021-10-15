@@ -124,7 +124,7 @@ function ProfileModal({ show, setShow, authorized, getdata }) {
                 // onChange={(e) => console.log(e.target.files[0])}
                 onChange={(e) => setImage(e.target.files[0])}
               />
-              <PanoramaIcon />
+              <PanoramaIcon fontSize="large" style={{ color: "#666666" }} />
             </label>
           </div>
 
