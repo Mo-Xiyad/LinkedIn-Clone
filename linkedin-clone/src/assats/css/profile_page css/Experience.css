@@ -5,7 +5,13 @@
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-
+.experience_biglist {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid rgb(224, 224, 224);
+}
 .experience_title {
 	font-size: 160%;
 	color: rgb(126, 126, 126);
@@ -55,7 +61,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 }
-.profile-button{
+.profile-button {
 	border-radius: 20px;
 	background-color: rgb(255, 255, 255);
 	margin-right: 20px;
@@ -63,23 +69,29 @@
 	border: 0px;
 	color: #2d7dcb;
 	cursor: pointer;
-
+}
+.lolz {
+	padding-top: px;
 }
 
-.experience_title{
+.experience_title {
 	display: inline;
 }
 
 .experience-button > button {
-	margin-top: 20px !important;
+	margin-top: 10px;
 	border-radius: 50%;
 	padding: 8px;
 	background-color: rgb(255, 255, 255);
 	margin-left: 20px;
 	border: 0px;
-	color: #9c9c9c;
+	color: #727272;
 	cursor: pointer;
 }
 .experience-button > button:hover {
 	background-color: rgb(230, 230, 230);
+}
+
+.experience_biglist > .btns_vertical_edit {
+	padding-right: 15px;
 }
