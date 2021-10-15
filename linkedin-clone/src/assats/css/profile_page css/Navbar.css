@@ -23,13 +23,11 @@
   width: 35px !important;
   margin-right: 10px !important;
 }
-.header_left img {
-  object-fit: contain;
-  position: absolute;
-  top: 11px;
+.header_left> a> svg {
+  margin-top: 10px;
   width: 35px !important;
   height: 35 !important;
-  margin-right: 15px;
+  
 }
 
 .header_search {

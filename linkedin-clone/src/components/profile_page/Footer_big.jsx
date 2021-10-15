@@ -6,10 +6,10 @@ import { Container, Form } from 'react-bootstrap';
 export default function Footer_big() {
 	return (
 		<Container className="profil_page footer_big">
-			<div className="footer_box_1">
+			<div className="d-none d-sm-inline footer_box_1">
 				<img
 					height="25px"
-					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbX6XACV3iEyn2z_c4LJCBXNjnV8TgDYVK5oblGS9oPJHTOhVUtPLkCv1KdAW6BC4yAQ&usqp=CAU"
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/2560px-LinkedIn_Logo.svg.png"
 				/>
 				<ui>
 					<li>About</li>
@@ -21,7 +21,7 @@ export default function Footer_big() {
 				<p>LinkedIn Corporation © 2021</p>
 			</div>
 
-			<div className="footer_box_2">
+			<div className=" d-none d-lg-inline footer_box_2">
 				<ui>
 					<li>Accessibility</li>
 					<li>Careers</li>
@@ -31,7 +31,7 @@ export default function Footer_big() {
 				</ui>
 			</div>
 
-			<div className="footer_box_3">
+			<div className=" d-none d-md-inline footer_box_3">
 				<ui>
 					<li>Talent Solutions</li>
 					<li>Marketing Solutions</li>
@@ -40,7 +40,7 @@ export default function Footer_big() {
 				</ui>
 			</div>
 
-			<div className="footer_box_4">
+			<div className=" d-none d-sm-inline footer_box_4">
 				<div className="footer_box_44">
 					<HelpIcon cclassName="bigfootericons" />
 					<div>
@@ -58,7 +58,7 @@ export default function Footer_big() {
 				</div>
 			</div>
 
-			<div className="footer_box_5">
+			<div className="d-none d-sm-inline footer_box_5">
 				<p>Select Language</p>
 				<Form.Control as="select">
 					<option>English (English )</option>

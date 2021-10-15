@@ -30,7 +30,7 @@ export default function Footer() {
 				<p>More</p>
 			</div>
 			<div className="txt_row_unic">
-				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbX6XACV3iEyn2z_c4LJCBXNjnV8TgDYVK5oblGS9oPJHTOhVUtPLkCv1KdAW6BC4yAQ&usqp=CAU" />
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/2560px-LinkedIn_Logo.svg.png" />
 				<h6>LinkedIn Corporation © 2021</h6>
 			</div>
 		</div>

@@ -6,8 +6,8 @@
 	position: sticky;
 	top: 350px;
 }
-.footer > * p{
-    cursor: pointer;
+.footer > * p {
+	cursor: pointer;
 }
 .footer > * p:hover {
 	color: rgb(27, 27, 221);
@@ -65,6 +65,5 @@
 }
 
 .txt_row_unic > img {
-	width: 65px;
-	height: auto;
+	width: 84px;
 }
