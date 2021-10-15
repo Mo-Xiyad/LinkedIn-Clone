@@ -461,7 +461,6 @@ export default function Experience({ authorized }) {
 					</div>
 				</div>
 				<Edu_list />
-				
 			</div>
 		</div>
 	);
