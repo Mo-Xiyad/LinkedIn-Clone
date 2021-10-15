@@ -95,7 +95,7 @@ export default function Post({ profile, authorized, posts }) {
               }
             </div>
           </div>
-          <div className="poster_header">
+          <div className="poster_header pt-3">
             <img src={post.user.image} />
 
             <div className="header_name">
