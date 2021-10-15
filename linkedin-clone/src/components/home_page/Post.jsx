@@ -8,7 +8,7 @@ import MoreHorizRoundedIcon from "@mui/icons-material/MoreHorizRounded";
 import { Dropdown, DropdownButton, Button } from "react-bootstrap";
 import EditpostModel from "./EditpostModel";
 import DeletePostModel from "./DeletePostModel";
-import PostPictureModel from "./PostPictureModel";
+// import PostPictureModel from "./PostPictureModel";
 import { Link } from "react-router-dom";
 
 export default function Post({ profile, authorized, posts }) {
@@ -24,13 +24,13 @@ export default function Post({ profile, authorized, posts }) {
   }, []);
   return (
     <>
-      <PostPictureModel
+      {/* <PostPictureModel
         className="fddfdfdfdf"
         showPostPicture={showPostPicture}
         setShowPostPicture={setShowPostPicture}
         authorized={authorized}
         postId={postId}
-      />
+      /> */}
       <EditpostModel
         show={show}
         setShow={setShow}
@@ -75,16 +75,6 @@ export default function Post({ profile, authorized, posts }) {
                           }}
                         >
                           Delete
-                        </Dropdown.Item>
-                      )}
-                      {authorized._id === post.user._id && (
-                        <Dropdown.Item
-                          onClick={() => {
-                            setShowPostPicture(true);
-                            setPostId(post._id);
-                          }}
-                        >
-                          Post picture
                         </Dropdown.Item>
                       )}
                       <Dropdown.Item>Another action</Dropdown.Item>
