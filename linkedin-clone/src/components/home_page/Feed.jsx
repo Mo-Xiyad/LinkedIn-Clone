@@ -15,6 +15,8 @@ export default function Feed({ authorized, profile }) {
   const [show, setShow] = useState(false);
 
   const [posts, setPosts] = useState([]);
+
+  // getting all posts
   let getdata = async () => {
     try {
       const response = await fetch(
