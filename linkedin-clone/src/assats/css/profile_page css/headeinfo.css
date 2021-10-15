@@ -23,9 +23,9 @@ body {
 .profile-img {
   width: 156px;
   height: 156px;
-  border: 4px solid white;
+  border: 3px solid white;
   position: absolute;
-  top: 85px;
+  top: 149px;
 }
 a > .profile-img {
   cursor: pointer;
@@ -80,7 +80,8 @@ a > .profile-img {
 }
 
 .profile-info {
-  margin-top: 237px;
+  margin-top: 306px;
+  margin-bottom: 10px;
   color: black;
   line-height: 13px;
 }
