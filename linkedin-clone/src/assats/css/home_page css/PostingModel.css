@@ -1,0 +1,46 @@
+.posting_model > .modal-content {
+	max-width: 650px;
+	border-radius: 15px;
+}
+
+.posting_model > .modal-content > .modal-header > .modal-title {
+	margin-left: 30px;
+	font-weight: 400;
+}
+.posting_model
+	> .modal-content
+	> .modal-body
+	> .form-group
+	> textarea.form-control {
+	padding-bottom: 80px;
+}
+
+.posting_model_footer_cont {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.hastag_posting_btn {
+	color: #097ec7;
+	border: 0px;
+	background-color: white;
+	font-weight: 500;
+	font-size: 120%;
+}
+
+.posting_model_post_btn {
+	background-color: #0a66c2;
+	border-radius: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-weight: 600;
+	font-size: 120%;
+}
+
+.posting_model_footer_group_btn_1{
+    display: flex;
+    flex-direction: row;
+}
+.posting_model_footer_group_btn_1> div{
+    margin-right: 20px;
+}
