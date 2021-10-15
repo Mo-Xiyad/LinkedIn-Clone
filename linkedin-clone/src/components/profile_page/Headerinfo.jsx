@@ -17,6 +17,7 @@ import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutl
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 
 import EditModal from "./ProfileModal";
+import AddProfileImage from "./AddProfileImage";
 
 const Wrapper = styled.aside`
   background: #c52465cc;
@@ -129,13 +130,19 @@ const Headerinfo = ({ profile, authorized, fetchUser }) => {
   const [buttonTwo, setButtonTwo] = useState(false);
   const [buttonThree, setButtonThree] = useState(false);
   const [show, setShow] = useState(false);
+  const [picUpdate, setPicUpdate] = useState(false);
 
   return (
     <>
-      
       <EditModal
         show={show}
         setShow={setShow}
+        authorized={authorized}
+        fetchUser={fetchUser}
+      />
+      <AddProfileImage
+        picUpdate={picUpdate}
+        setPicUpdate={setPicUpdate}
         authorized={authorized}
         fetchUser={fetchUser}
       />
@@ -160,14 +167,26 @@ const Headerinfo = ({ profile, authorized, fetchUser }) => {
                 </div>
               </div>
             )}
-            <Link>
+            {authorized._id === profile._id && (
+              <Link onClick={() => setPicUpdate(true)}>
+                <Image
+                  src={profile.image}
+                  roundedCircle
+                  className="profile-img"
+                  key={profile._id}
+                />
+              </Link>
+            )}
+            {authorized._id !== profile._id && (
+              // <Link>
               <Image
                 src={profile.image}
                 roundedCircle
                 className="profile-img"
                 key={profile._id}
               />
-            </Link>
+              // </Link>
+            )}
             {authorized._id === profile._id && (
               <div className="profile-img-edit-icon">
                 <div>
@@ -182,6 +201,7 @@ const Headerinfo = ({ profile, authorized, fetchUser }) => {
                 <div className="col-6">
                   <h3>
                     {profile.name}
+                    <h3 className="d-inline px-2">{profile.surname}</h3>
                     <small>
                       <span className="font-weight-light">(He/Him)</span>
                     </small>
