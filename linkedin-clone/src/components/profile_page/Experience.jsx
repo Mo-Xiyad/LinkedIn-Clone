@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
-import Edu_list from './Edu_list';
-import AddIcon from '@mui/icons-material/Add';
-import { Modal, Button } from 'react-bootstrap';
-import { Form } from 'react-bootstrap';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
-import ReorderIcon from '@mui/icons-material/Reorder';
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import Edu_list from "./Edu_list";
+import AddIcon from "@mui/icons-material/Add";
+import { Modal, Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import ReorderIcon from "@mui/icons-material/Reorder";
+import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 export default function Experience({ authorized }) {
 	const params = useParams();
 
@@ -464,4 +464,5 @@ export default function Experience({ authorized }) {
 			</div>
 		</div>
 	);
+ 
 }
