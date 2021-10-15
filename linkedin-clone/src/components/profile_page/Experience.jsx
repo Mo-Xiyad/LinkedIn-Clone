@@ -110,6 +110,14 @@ export default function Experience({ authorized }) {
 		fetchData();
 	}, [params.userId]);
 
+	function myFunction() {
+		var x = document.getElementsByClassName("btns_vertical_edit");
+		if (x.style.display === 'none') {
+			x.style.display = 'block';
+		} else {
+			x.style.display = 'none';
+		}
+	}
 	return (
 		<div className="experience">
 			{/* ------Experience_model--------> */}
@@ -410,7 +418,11 @@ export default function Experience({ authorized }) {
 				</div>
 			</div>
 			{experiences.map((experience) => (
-				<div className="experience_biglist">
+				<div
+					onmouseover="myFunction()"
+					onmouseleave="myFunction()"
+					className="experience_biglist"
+				>
 					<div className="experience_list">
 						<img
 							className="img-fluid wiges_onlibottom_listimg"
@@ -427,7 +439,7 @@ export default function Experience({ authorized }) {
 						</div>
 						<hr />
 					</div>
-					<div className="btns_vertical_edit">
+					<div className="d-none btns_vertical_edit">
 						<EditOutlinedIcon fontSize="large" style={{ color: '#a1a09e' }} />
 						<ReorderIcon fontSize="large" style={{ color: '#a1a09e' }} />
 					</div>
