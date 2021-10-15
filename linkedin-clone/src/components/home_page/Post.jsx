@@ -9,6 +9,7 @@ import { Dropdown, DropdownButton, Button } from "react-bootstrap";
 import EditpostModel from "./EditpostModel";
 import DeletePostModel from "./DeletePostModel";
 import PostPictureModel from "./PostPictureModel";
+import { Link } from "react-router-dom";
 
 export default function Post({ profile, authorized, posts }) {
   const [show, setShow] = useState(false);
@@ -97,7 +98,9 @@ export default function Post({ profile, authorized, posts }) {
             <img src={post.user.image} />
 
             <div className="header_name">
-              <h4>{post.user.name}</h4>
+              <Link to={`/profile/${post.user._id}`}>
+                <h4>{post.user.name}</h4>
+              </Link>
               <p>{post.user.title}</p>
               <p>3d.</p>
             </div>
