@@ -131,8 +131,37 @@ export default function Experience({ authorized }) {
             </div>
 
             <div className="input_comp_name">
-              <label>Company name*</label>
+              <label>Employment type</label>
+              <Form.Control as="select">
+                <option>Please select</option>
+                <option>Full-time</option>
+                <option>Part-time</option>
+                <option>Self-employed</option>
+                <option>Freelance</option>
+                <option>Contract</option>
+                <option>Internship</option>
+                <option>Apprenticeship</option>
+              </Form.Control>
+              <label>Country-specific employment types</label>
+            </div>
+
+            <div className="input_city">
+              <label>Location</label>
               <Form.Control
+                type="text"
+                placeholder="Ex: London, United Kingdom"
+                valaue={experienceData.area}
+                onChange={(e) =>
+                  setExperienceData({ ...experienceData, area: e.target.value })
+                }
+              />
+            </div>
+
+            <h5>learn more</h5>
+            <div className="input_Company_name ">
+              <label>Company name </label>
+              <Form.Control
+                placeholder="Ex: Microsoft"
                 value={experienceData.company}
                 onChange={(e) =>
                   setExperienceData({
@@ -141,24 +170,13 @@ export default function Experience({ authorized }) {
                   })
                 }
               />
-              <label>Country-specific employment types</label>
             </div>
 
-            <div className="input_city">
-              <label>Location</label>
-              <Form.Control
-                type="text"
-                valaue={experienceData.area}
-                placeholder="Ex: Retail Selse Manager"
-                onChange={(e) =>
-                  setExperienceData({ ...experienceData, area: e.target.value })
-                }
-              />
-            </div>
             <Form.Check
               type="checkbox"
               label="I am currently working in this role"
             />
+
             <div className="input_date">
               <div className="start_date">
                 <div>
@@ -202,17 +220,14 @@ export default function Experience({ authorized }) {
 
             <div className="input_headline">
               <label>Headline</label>
-              <Form.Control
-                type="text"
-                placeholder="Ex: Retail Selse Manager"
-              />
+              <Form.Control type="text" placeholder="Ex: Web Developer" />
             </div>
 
             <div className="input_industry">
               <label>Industry*</label>
               <Form.Control
                 type="text"
-                placeholder="Ex: Retail Selse Manager"
+                placeholder="Ex: Architecture & Planning"
               />
               <label>
                 LinkedIn uses industry information to provide more relevant
