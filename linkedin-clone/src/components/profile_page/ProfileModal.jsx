@@ -37,7 +37,6 @@ function ProfileModal({ show, setShow, authorized, fetchUser }) {
 				<Modal.Title>Edit intro</Modal.Title>
 			</Modal.Header>
 			<Modal.Body className="all_profile_inputs">
-				<Form.Label>First Name*</Form.Label>
 				<div className="model_name_input">
 					<Col>
 						<Form.Label>First Name*</Form.Label>

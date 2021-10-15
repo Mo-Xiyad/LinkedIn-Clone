@@ -278,12 +278,12 @@ export default function Experience({ authorized }) {
 									Add Meddia
 								</h5>
 							</button>
-							{/* ==================== IMGAE INPUT  */}
+							{/* ==================== IMGAE INPUT========================================  */}
 							<Form.Control
 								type="file"
 								onChange={(e) => setImage(e.target.files[0])}
 							/>
-							{/* ==================== END IMGAE INPUT  */}
+							{/* ==================== END IMGAE INPUT====================================  */}
 						</div>
 					</div>
 				</Modal.Body>
@@ -393,12 +393,15 @@ export default function Experience({ authorized }) {
 							</h6>
 							<h6>Learn more</h6>
 							<br />
+							{/* ==================== IMGAE INPUT========================================  */}
+
 							<button>
 								<h5>
 									<AddIcon />
 									Add Meddia
 								</h5>
 							</button>
+							{/* ==================== IMGAE INPUT========================================  */}
 						</div>
 					</div>
 				</Modal.Body>

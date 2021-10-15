@@ -111,12 +111,15 @@ export default function Esdu_list() {
 							</h6>
 							<h6>Learn more</h6>
 							<br />
+							{/* ==================== IMGAE INPUT========================================  */}
+
 							<button>
 								<h5>
 									<AddIcon />
 									Add Meddia
 								</h5>
 							</button>
+							{/* ==================== IMGAE INPUT========================================  */}
 						</div>
 					</div>
 				</Modal.Body>

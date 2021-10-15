@@ -27,6 +27,9 @@
 	border-bottom: 1px solid rgb(223, 223, 223);
 	align-items: center;
 }
+.edu_list_list:last-child {
+	border-bottom: 0px;
+}
 .edu_list_sublist {
 	display: flex;
 	flex-direction: row;

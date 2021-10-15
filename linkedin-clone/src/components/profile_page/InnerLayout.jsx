@@ -30,26 +30,28 @@ const InnerLayout = ({ authorized, setProfile, profile }) => {
 	console.log({ profile });
 
 	return (
-		<Container className="profil_page">
-			<div className="profil_container">
-				{profile && (
-					<>
-						<Headerinfo
-							profile={profile}
-							authorized={authorized}
-							fetchUser={fetchUser}
-						/>
-						<YourDashboard />
-						<Activity />
-						<Experience authorized={authorized} />
-						<Skills_endorsements />
-						<Interests />
-					</>
-				)}
-			</div>
-			<Aside />
+		<>
+			<Container className="profil_page">
+				<div className="profil_container">
+					{profile && (
+						<>
+							<Headerinfo
+								profile={profile}
+								authorized={authorized}
+								fetchUser={fetchUser}
+							/>
+							<YourDashboard />
+							<Activity />
+							<Experience authorized={authorized} />
+							<Skills_endorsements />
+							<Interests />
+						</>
+					)}
+				</div>
+				<Aside />
+			</Container>
 			<Footer_big />
-		</Container>
+		</>
 	);
 };
 
