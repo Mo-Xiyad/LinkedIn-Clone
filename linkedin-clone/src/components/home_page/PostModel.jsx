@@ -93,10 +93,16 @@ function ProfileModal({ show, setShow, authorized, getdata }) {
 				</div>
 			</Modal.Body>
 			<Modal.Footer className="posting_model_footer_cont">
-				<div className="posting_model_footer_group_btn_1">
+        <div className="posting_model_footer_group_btn_1">
+          
+{/* ================================= */}
 					<div>
-						<PanoramaIcon fontSize="large" style={{ color: '#666666' }} />
+						<lable id="post_img_btn">
+							<input type="file"  />
+							<PanoramaIcon fontSize="large" style={{ color: '#666666' }} /> Text
+						</lable>
 					</div>
+{/* ================================= */}
 
 					<div>
 						<YouTubeIcon fontSize="large" style={{ color: '#666666' }} />
@@ -106,24 +112,24 @@ function ProfileModal({ show, setShow, authorized, getdata }) {
 						<DescriptionIcon fontSize="large" style={{ color: '#666666' }} />
 					</div>
 
-					<div>
+					<div className="d-none d-lg-inline">
 						<BusinessCenterIcon fontSize="large" style={{ color: '#666666' }} />
 					</div>
 
-					<div>
+					<div className="d-none d-lg-inline">
 						<Brightness7Icon fontSize="large" style={{ color: '#666666' }} />
 					</div>
 
-					<div>
+					<div className="d-none d-lg-inline">
 						<EqualizerIcon fontSize="large" style={{ color: '#666666' }} />
 					</div>
 
-					<div >
+					<div>
 						<MoreHorizIcon fontSize="large" style={{ color: '#666666' }} />
 					</div>
 				</div>
 
-				<div className="posting_model_footer_group_btn_2">
+				<div className=" d-none d-sm-inline posting_model_footer_group_btn_2">
 					<ChatIcon style={{ color: '#666666' }} />
 					Anyone
 				</div>

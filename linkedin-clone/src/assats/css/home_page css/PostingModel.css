@@ -2,6 +2,10 @@
 	max-width: 650px;
 	border-radius: 15px;
 }
+.editing_model {
+	max-width: 650px;
+	border-radius: 15px;
+}
 
 .posting_model > .modal-content > .modal-header > .modal-title {
 	margin-left: 30px;
@@ -27,6 +31,10 @@
 	font-weight: 500;
 	font-size: 120%;
 }
+.hastag_posting_btn:hover {
+	background-color: #e2f0fe !important ;
+	color: #097ec7;
+}
 
 .posting_model_post_btn {
 	background-color: #0a66c2;
@@ -37,10 +45,45 @@
 	font-size: 120%;
 }
 
-.posting_model_footer_group_btn_1{
-    display: flex;
-    flex-direction: row;
+.posting_model_footer_group_btn_1 {
+	display: flex;
+	flex-direction: row;
 }
-.posting_model_footer_group_btn_1> div{
-    margin-right: 20px;
+.posting_model_footer_group_btn_1 > div {
+	margin-right: 20px;
 }
+
+.posting_model_footer_group_btn_1 > div:hover {
+	background-color: rgb(212, 212, 212);
+	border-radius: 50%;
+	/* border: 3px solid rgb(212, 212, 212); */
+}
+input[type='file'] {
+	display: none;
+}
+#post_img_btn {
+	border: 1px solid rgb(0, 0, 0);
+	cursor: pointer;
+}
+
+/* .post_img_btn:hover {
+	background-color: rgb(212, 212, 212);
+} */
+
+/* ::-webkit-file-upload-button{
+    background-color: inherit;
+    border: none;
+    width: 0px;
+    height: 0px;
+} */
+
+/* .custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+} */
+/* <label className="update picture">
+          <input type="file" />
+          <PanoramaIcon /> 
+        </label> */
