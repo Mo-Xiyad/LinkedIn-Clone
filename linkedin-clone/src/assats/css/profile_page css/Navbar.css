@@ -1,12 +1,12 @@
 .App {
 	background-color: #f3f2ef;
 }
-.w-100{
+.w-100 {
 	position: sticky;
 	top: 0px;
+	z-index: 999;
 }
 .header {
-	
 	max-width: 1400px;
 	z-index: 999;
 	background: #ffffff;
@@ -54,6 +54,14 @@
 	width: 250px;
 }
 
+.user_name_hunted {
+	font-size: medium;
+	color: black;
+}
+.h3user_name_hunted {
+	font-size: x-large;
+	color: black;
+}
 
 .header_search > input:focus {
 	width: 400px;
@@ -68,12 +76,11 @@
 	align-items: center;
 }
 .headericons {
-  padding-left: 5px;
-  padding-right: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 @media (max-width: 985px) {
 	.header_search {
 		background-color: #ffffff;
 	}
 }
-

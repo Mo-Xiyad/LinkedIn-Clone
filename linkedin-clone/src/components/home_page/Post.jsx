@@ -25,6 +25,7 @@ export default function Post({ profile, authorized, posts }) {
   return (
     <>
       <PostPictureModel
+        className="fddfdfdfdf"
         showPostPicture={showPostPicture}
         setShowPostPicture={setShowPostPicture}
         authorized={authorized}
@@ -99,7 +100,7 @@ export default function Post({ profile, authorized, posts }) {
 
             <div className="header_name">
               <Link to={`/profile/${post.user._id}`}>
-                <h4>{post.user.name}</h4>
+                <h4 className="user_name_hunted">{post.user.name}</h4>
               </Link>
               <p>{post.user.title}</p>
               <p>3d.</p>
