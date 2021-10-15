@@ -48,9 +48,11 @@
   flex-direction: column;
   align-items: center;
   padding: 0px;
-  color: #5d3b09;
+  color: #835e30;
   line-height: 18px;
   font-size: 12px;
+  font-weight: 400;
+  text-align: center;
 }
 .header_search > input {
   margin-left: 5px;
@@ -90,4 +92,11 @@
   .header_search {
     background-color: #ffffff;
   }
+}
+.line-between-profile-img-nav {
+  width: 1px;
+  height: 50px;
+  background-color: #ebebeb;
+  margin-left: 15px;
+  margin-right: 20px;
 }
