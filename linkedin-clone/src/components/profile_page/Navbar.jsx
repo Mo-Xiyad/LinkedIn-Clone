@@ -47,6 +47,7 @@ function Navbar({ authorized }) {
           <Link to={"/profile/me"}>
             <Melogo title="ME" authorized={authorized} />
           </Link>
+          <div className="line-between-profile-img-nav"></div>
           <HeaderIcons title="Work" Icon={AppsIcon} />
           <div className="notif_text d-none d-lg-inline ">
             <p className="mb-0">Try Preminum for </p>
