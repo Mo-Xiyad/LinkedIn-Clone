@@ -111,7 +111,7 @@ export default function Experience({ authorized }) {
 	}, [params.userId]);
 
 	function myFunction() {
-		var x = document.getElementsByClassName("btns_vertical_edit");
+		var x = document.getElementsByClassName('btns_vertical_edit');
 		if (x.style.display === 'none') {
 			x.style.display = 'block';
 		} else {
@@ -120,7 +120,7 @@ export default function Experience({ authorized }) {
 	}
 	return (
 		<div className="experience">
-			{/* ------Experience_model--------> */}
+			{/* ------Experience_model---- workModel----> */}
 			<Modal size="lg" show={workModel} onHide={() => setWorkModel(false)}>
 				<Modal.Header closeButton>
 					<Modal.Title id="contained-modal-title-vcenter">
@@ -439,9 +439,17 @@ export default function Experience({ authorized }) {
 						</div>
 						<hr />
 					</div>
-					<div className="d-none btns_vertical_edit">
-						<EditOutlinedIcon fontSize="large" style={{ color: '#a1a09e' }} />
-						<ReorderIcon fontSize="large" style={{ color: '#a1a09e' }} />
+					<div className="btns_vertical_edit">
+						<EditOutlinedIcon
+							onClick={() => setWorkModel(true)}
+							fontSize="large"
+							style={{ color: '#a1a09e' }}
+						/>
+						<ReorderIcon
+							onClick={() => setWorkModel(true)}
+							fontSize="large"
+							style={{ color: '#a1a09e' }}
+						/>
 					</div>
 				</div>
 			))}
@@ -453,6 +461,7 @@ export default function Experience({ authorized }) {
 					</div>
 				</div>
 				<Edu_list />
+				
 			</div>
 		</div>
 	);
