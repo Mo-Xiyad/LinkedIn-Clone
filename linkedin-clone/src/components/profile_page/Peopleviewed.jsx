@@ -3,7 +3,7 @@ import "../../assats/css/profile_page css/people_view.css";
 import { Link } from "react-router-dom";
 const Peopleviewed = ({ title, userData, isLoading }) => {
   return (
-    <div class="p-3 pl-4 pb-4 mb-3 bg-light rounded aside">
+    <div class="p-3 pl-4 pb-4 mb-3 i_found_the_container bg-light rounded aside">
       <div className="peope-view-user-card">
         <h6>{title}</h6>
         {isLoading && (

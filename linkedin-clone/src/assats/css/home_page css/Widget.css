@@ -9,6 +9,7 @@
 	background-color: white;
 	border: 1px solid rgb(221, 220, 220);
 	position: sticky;
+	top: 70px;
 }
 
 .head_top {
@@ -100,4 +101,9 @@
 }
 .head_topbotom:hover {
 	background-color: rgb(207, 207, 207);
+}
+
+.i_found_the_container {
+	position: sticky;
+	top: 70px;
 }

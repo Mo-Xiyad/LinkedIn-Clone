@@ -17,7 +17,6 @@
 	color: rgb(126, 126, 126);
 	padding-top: 20px;
 	margin-left: 20px;
-	margin-bottom: 20px;
 }
 .experience_list > img {
 	margin-left: 20px;
@@ -29,6 +28,7 @@
 	display: flex;
 	flex-direction: row;
 	padding-bottom: 20px;
+	padding-top: 20px;
 }
 .experience_list_txt {
 	margin-left: 10px;

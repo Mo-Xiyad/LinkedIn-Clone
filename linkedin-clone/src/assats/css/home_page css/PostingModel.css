@@ -12,9 +12,10 @@
 }
 
 .delete_model_header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 	border-bottom: 0px !important;
-	text-align: center !important;
-    color: hotpink;
 }
 
 .delete_model_footer {
