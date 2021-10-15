@@ -70,7 +70,7 @@ function EditpostModel({ show, setShow, authorized, postId }) {
 			onHide={() => setShow(false)}
 		>
 			<Modal.Header closeButton>
-				<Modal.Title>Edit yes post</Modal.Title>
+				<Modal.Title>Edit post</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
 				<div className="position-relative d-flex mb-3">
@@ -80,14 +80,6 @@ function EditpostModel({ show, setShow, authorized, postId }) {
 							<p className="mb-0">
 								<strong>{authorized.name}</strong>
 							</p>
-							<Button>
-								<p className="mb-0">
-									<span>
-										<PublicRoundedIcon />{' '}
-									</span>
-									Anyone{' '}
-								</p>
-							</Button>{' '}
 						</div>
 					</div>
 				</div>
@@ -115,27 +107,27 @@ function EditpostModel({ show, setShow, authorized, postId }) {
 					{/* ================================= */}
 
 					<div>
-						<YouTubeIcon fontSize="large" style={{ color: '#666666' }} />
+						<YouTubeIcon fontSize="large" style={{ color: '#d3d3d3' }} />
 					</div>
 
 					<div>
-						<DescriptionIcon fontSize="large" style={{ color: '#666666' }} />
+						<DescriptionIcon fontSize="large" style={{ color: '#d3d3d3' }} />
 					</div>
 
 					<div className="d-none d-lg-inline">
-						<BusinessCenterIcon fontSize="large" style={{ color: '#666666' }} />
+						<BusinessCenterIcon fontSize="large" style={{ color: '#d3d3d3' }} />
 					</div>
 
 					<div className="d-none d-lg-inline">
-						<Brightness7Icon fontSize="large" style={{ color: '#666666' }} />
+						<Brightness7Icon fontSize="large" style={{ color: '#d3d3d3' }} />
 					</div>
 
 					<div className="d-none d-lg-inline">
-						<EqualizerIcon fontSize="large" style={{ color: '#666666' }} />
+						<EqualizerIcon fontSize="large" style={{ color: '#d3d3d3' }} />
 					</div>
 
 					<div>
-						<MoreHorizIcon fontSize="large" style={{ color: '#666666' }} />
+						<MoreHorizIcon fontSize="large" style={{ color: '#d3d3d3' }} />
 					</div>
 				</div>
 				<Button
