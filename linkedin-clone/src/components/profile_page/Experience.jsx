@@ -47,8 +47,7 @@ export default function Experience({ authorized }) {
         ` https://striveschool-api.herokuapp.com/api/profile/${id}/experiences`,
         {
           headers: {
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTY0OTE0M2E4OTBjYzAwMTVjZjA3ZjQiLCJpYXQiOjE2MzM5ODA3MzksImV4cCI6MTYzNTE5MDMzOX0.KuT_PgG7s0jzEK_t0MA93LSE7cV3svViPrJzVXJeJ-o",
+            Authorization: process.env.REACT_APP_API_KEY,
           },
         }
       );

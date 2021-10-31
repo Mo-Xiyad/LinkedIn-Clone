@@ -5,13 +5,13 @@ import SendIcon from "@mui/icons-material/Send";
 import ShareIcon from "@mui/icons-material/Share";
 import MessageIcon from "@mui/icons-material/Message";
 import MoreHorizRoundedIcon from "@mui/icons-material/MoreHorizRounded";
-import { Dropdown, DropdownButton, Button } from "react-bootstrap";
+import { Dropdown, DropdownButton, Button, Image } from "react-bootstrap";
 import EditpostModel from "./EditpostModel";
 import DeletePostModel from "./DeletePostModel";
 // import PostPictureModel from "./PostPictureModel";
 import { Link } from "react-router-dom";
 
-export default function Post({ profile, authorized, posts }) {
+export default function Post({ profile, authorized, posts, getdata }) {
   const [show, setShow] = useState(false);
 
   const [showPostPicture, setShowPostPicture] = useState(false);
@@ -36,6 +36,7 @@ export default function Post({ profile, authorized, posts }) {
         setShow={setShow}
         authorized={authorized}
         postId={postId}
+        getdata={getdata}
       />
       <DeletePostModel
         showDelete={showDelete}
@@ -55,7 +56,6 @@ export default function Post({ profile, authorized, posts }) {
                         style={{ color: "#717171", margin: "0px ​0px 0px -8p" }}
                       />
                     </Dropdown.Toggle>
-
                     <Dropdown.Menu>
                       {authorized._id === post.user._id && (
                         <Dropdown.Item
@@ -86,7 +86,7 @@ export default function Post({ profile, authorized, posts }) {
             </div>
           </div>
           <div className="poster_header pt-3">
-            <img src={post.user.image} />
+            <Image src={post.user.image} />
 
             <div className="header_name">
               <Link to={`/profile/${post.user._id}`}>
@@ -98,7 +98,7 @@ export default function Post({ profile, authorized, posts }) {
           </div>
           <h4 className="poster_blog">{post.text}</h4>
           <div className="img_container">
-            <img className="img-fluid" src={post.image} />
+            <Image className="img-fluid" src={post.image} />
           </div>
 
           <div className="poster_icon">

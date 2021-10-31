@@ -24,8 +24,7 @@ export default function Feed({ authorized, profile }) {
         {
           methode: "Get",
           headers: {
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTY1ZWZjMmEwMjlmNTAwMTU3YzYzNzAiLCJpYXQiOjE2MzQwNzA0NjYsImV4cCI6MTYzNTI4MDA2Nn0.6TmpZr9l1pAa5KnLrVIjmecOf-U4gH_MYwf39lJOGWM",
+            Authorization: process.env.REACT_APP_API_KEY,
           },
         }
       );
@@ -34,8 +33,8 @@ export default function Feed({ authorized, profile }) {
         let posts = data.reverse().slice(0, 150);
 
         setPosts(posts);
-        console.log("POSTS========");
-        console.log(posts);
+        console.log("POSTS========Feed.jsx");
+        // console.log(posts);
       } else {
         console.log("rr after the fetch");
       }
@@ -85,7 +84,12 @@ export default function Feed({ authorized, profile }) {
         </div>
 
         <div className="postfeed">
-          <Post posts={posts} profile={profile} authorized={authorized} />
+          <Post
+            posts={posts}
+            profile={profile}
+            authorized={authorized}
+            getdata={getdata}
+          />
         </div>
       </div>
     </>
