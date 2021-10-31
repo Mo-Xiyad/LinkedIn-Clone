@@ -24,6 +24,10 @@
   font-size: 100%;
   font-weight: 600;
 }
+
+.header_name {
+  padding: 12px 0 0 9px;
+}
 .header_name > p {
   font-size: 85%;
   font-weight: 200;
@@ -32,10 +36,11 @@
 }
 
 .poster_blog {
-  margin-left: 15px;
-  margin-right: 10px;
-  font-size: 110%;
-  font-weight: 475;
+  margin: 5px 0 5px 16px;
+  color: black;
+}
+.poster_blog > p {
+  margin: 5 0 5 16 !important;
 }
 
 .poster_icon {

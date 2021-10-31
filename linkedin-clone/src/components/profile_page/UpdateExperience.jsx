@@ -35,6 +35,25 @@ const UpdateExperience = ({
     }
   };
 
+  const deleteEx = async () => {
+    try {
+      const response = await fetch(
+        `https://striveschool-api.herokuapp.com/api/profile/${authorized._id}/experiences/${exp._id}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: process.env.REACT_APP_API_KEY,
+          },
+        }
+      );
+      if (response.ok) {
+        setShowUpdateModel(false);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <Modal
       size="lg"
@@ -43,17 +62,17 @@ const UpdateExperience = ({
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Add experience
+          Edit Experience
         </Modal.Title>
       </Modal.Header>
       <Modal.Body class="from__body">
         <div className="input_form">
           <div className="input_title">
             <label>Title*</label>
-            <Form.Control
-              value={experiences.role}
+            {/* <Form.Control
+              value={exp.role}
               onChange={(e) => setExp({ ...exp, role: e.target.value })}
-            />
+            /> */}
           </div>
 
           <div className="input_comp_name">
@@ -76,7 +95,7 @@ const UpdateExperience = ({
             {/* <Form.Control
               type="text"
               placeholder="Ex: London, United Kingdom"
-              valaue={exp.area}
+              value={exp.area}
               onChange={(e) => setExp({ ...exp, area: e.target.value })}
             /> */}
           </div>
@@ -190,21 +209,25 @@ const UpdateExperience = ({
             <button>
               <h5>
                 <AddIcon />
-                Add Meddia
+                <label class="">
+                  <input
+                    type="file"
+                    onChange={(e) => setImage(e.target.files[0])}
+                  />
+                  <p className="mb-0 mt-2 mx-2"> Add Photo</p>
+                </label>
               </h5>
             </button>
-            {/* ==================== IMGAE INPUT  */}
-            <Form.Control
-              type="file"
-              onChange={(e) => setImage(e.target.files[0])}
-            />
-            {/* ==================== END IMGAE INPUT  */}
           </div>
         </div>
       </Modal.Body>
       <Modal.Footer className="footer_button">
         <Button onClick={() => submitUpdateForm()}>
           <h5> Save </h5>
+        </Button>
+
+        <Button onClick={() => deleteEx()}>
+          <h5> Delete</h5>
         </Button>
       </Modal.Footer>
     </Modal>

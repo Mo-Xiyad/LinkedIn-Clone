@@ -24,13 +24,6 @@ export default function Post({ profile, authorized, posts, getdata }) {
   }, []);
   return (
     <>
-      {/* <PostPictureModel
-        className="fddfdfdfdf"
-        showPostPicture={showPostPicture}
-        setShowPostPicture={setShowPostPicture}
-        authorized={authorized}
-        postId={postId}
-      /> */}
       <EditpostModel
         show={show}
         setShow={setShow}
@@ -96,7 +89,9 @@ export default function Post({ profile, authorized, posts, getdata }) {
               <p>3d.</p>
             </div>
           </div>
-          <h4 className="poster_blog">{post.text}</h4>
+          <div className="poster_blog">
+            <p className="">{post.text}</p>
+          </div>
           <div className="img_container">
             <Image className="img-fluid" src={post.image} />
           </div>

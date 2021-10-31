@@ -77,8 +77,7 @@ export default function Experience({ authorized }) {
           body: JSON.stringify(experienceData),
           headers: {
             "Content-Type": "application/json",
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTY0OTE0M2E4OTBjYzAwMTVjZjA3ZjQiLCJpYXQiOjE2MzM5ODA3MzksImV4cCI6MTYzNTE5MDMzOX0.KuT_PgG7s0jzEK_t0MA93LSE7cV3svViPrJzVXJeJ-o",
+            Authorization: process.env.REACT_APP_API_KEY,
           },
         }
       );
@@ -96,8 +95,7 @@ export default function Experience({ authorized }) {
               method: "POST",
               body: formdata,
               headers: {
-                Authorization:
-                  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTY0OTE0M2E4OTBjYzAwMTVjZjA3ZjQiLCJpYXQiOjE2MzM5ODA3MzksImV4cCI6MTYzNTE5MDMzOX0.KuT_PgG7s0jzEK_t0MA93LSE7cV3svViPrJzVXJeJ-o",
+                Authorization: process.env.REACT_APP_API_KEY,
               },
             }
           );
@@ -132,7 +130,7 @@ export default function Experience({ authorized }) {
       />
       {/* END UPDATE MODEL */}
 
-      {/* ------Experience_model---- workModel----> */}
+      {/* ------Experience_model---- workModel---- ADD> */}
       <Modal size="lg" show={workModel} onHide={() => setWorkModel(false)}>
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
@@ -285,17 +283,15 @@ export default function Experience({ authorized }) {
               </h6>
               <h6>Learn more</h6>
               <button>
-                <h5>
-                  <AddIcon />
-                  Add Meddia
-                </h5>
+                <AddIcon />
+                <label class="">
+                  <input
+                    type="file"
+                    onChange={(e) => setImage(e.target.files[0])}
+                  />
+                  <p className="mb-0 mt-2 mx-2"> Add Photo</p>
+                </label>
               </button>
-              {/* ==================== IMGAE INPUT  */}
-              <Form.Control
-                type="file"
-                onChange={(e) => setImage(e.target.files[0])}
-              />
-              {/* ==================== END IMGAE INPUT  */}
             </div>
           </div>
         </Modal.Body>
@@ -452,15 +448,20 @@ export default function Experience({ authorized }) {
               <p>{experience.endDate}</p>
               <p>{experience.description}</p>
               <p>{experience.area}</p>
+              <p>{experience._id}</p>
+              <p>{authorized._id}</p>
             </div>
             <hr />
           </div>
           <div
             className="btns_vertical_edit"
-            onClick={() => setExp(experience)}
+            // onClick={() => setExp(experience)}
           >
             <EditOutlinedIcon
-              onClick={() => setShowUpdateModel(true)}
+              onClick={() => {
+                setShowUpdateModel(true);
+                setExp(experience);
+              }}
               fontSize="large"
               style={style}
             />

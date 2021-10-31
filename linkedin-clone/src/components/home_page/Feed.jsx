@@ -55,7 +55,7 @@ export default function Feed({ authorized, profile }) {
         getdata={getdata}
         authorized={authorized}
       />
-      ;
+
       <div className="feeds">
         <div className="feeding">
           <div className="posting_area">
