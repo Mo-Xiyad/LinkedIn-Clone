@@ -34,7 +34,7 @@ export default function Feed({ authorized, profile }) {
 
         setPosts(posts);
         console.log("POSTS========Feed.jsx");
-        // console.log(posts);
+        console.log(posts[0].createdAt);
       } else {
         console.log("rr after the fetch");
       }
