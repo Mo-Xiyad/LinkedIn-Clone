@@ -9,6 +9,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import ReorderIcon from "@mui/icons-material/Reorder";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import UpdateExperience from "./UpdateExperience";
+import { format, parseISO } from "date-fns";
 
 export default function Experience({ authorized }) {
   const params = useParams();
@@ -18,7 +19,7 @@ export default function Experience({ authorized }) {
   const [showUpdateModel, setShowUpdateModel] = useState(false);
 
   // this is for the update model setting one experience on click as an object
-  const [exp, setExp] = useState();
+  const [exp, setExp] = useState(null);
 
   const [experienceData, setExperienceData] = useState({
     role: "",
@@ -119,15 +120,18 @@ export default function Experience({ authorized }) {
   return (
     <div className="experience">
       {/* UPDATE EXPERIENCE MODEL */}
-      <UpdateExperience
-        showUpdateModel={showUpdateModel}
-        setShowUpdateModel={setShowUpdateModel}
-        exp={exp}
-        setExp={setExp}
-        setImage={setImage}
-        authorized={authorized}
-        experiences={experiences}
-      />
+      {exp && (
+        <UpdateExperience
+          showUpdateModel={showUpdateModel}
+          setShowUpdateModel={setShowUpdateModel}
+          exp={exp}
+          setExp={setExp}
+          setImage={setImage}
+          authorized={authorized}
+          experiences={experiences}
+          fetchData={fetchData}
+        />
+      )}
       {/* END UPDATE MODEL */}
 
       {/* ------Experience_model---- workModel---- ADD> */}
@@ -444,12 +448,10 @@ export default function Experience({ authorized }) {
             <div className="experience_list_txt">
               <h5>{experience.role}</h5>
               <p>{experience.company}</p>
-              <p>{experience.startDate}</p>
-              <p>{experience.endDate}</p>
+              <p>{format(parseISO(experience.startDate), "MMMM do yyyy")}</p>
+              <p>{format(parseISO(experience.endDate), "MMMM do yyyy")}</p>
               <p>{experience.description}</p>
               <p>{experience.area}</p>
-              <p>{experience._id}</p>
-              <p>{authorized._id}</p>
             </div>
             <hr />
           </div>
@@ -465,11 +467,11 @@ export default function Experience({ authorized }) {
               fontSize="large"
               style={style}
             />
-            <ReorderIcon
+            {/* <ReorderIcon
               onClick={() => setWorkModel(true)}
               fontSize="large"
               style={style}
-            />
+            /> */}
           </div>
         </div>
       ))}
