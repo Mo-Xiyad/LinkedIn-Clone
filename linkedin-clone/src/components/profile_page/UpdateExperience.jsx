@@ -4,6 +4,7 @@ import { Modal, Button } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { format, parseISO } from "date-fns";
 
 const UpdateExperience = ({
   showUpdateModel,
@@ -13,11 +14,12 @@ const UpdateExperience = ({
   setImage,
   authorized,
   experiences,
+  fetchData,
 }) => {
   const submitUpdateForm = async () => {
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/${authorized._id}/experiences/${exp.id}`,
+        `https://striveschool-api.herokuapp.com/api/profile/${authorized._id}/experiences/${exp._id}`,
         {
           method: "PUT",
           body: JSON.stringify(exp),
@@ -27,8 +29,11 @@ const UpdateExperience = ({
           },
         }
       );
+
       if (response.ok) {
+        fetchData();
         setShowUpdateModel(false);
+        console.log(`exp updated successfully`);
       }
     } catch (error) {
       console.log(error);
@@ -47,6 +52,7 @@ const UpdateExperience = ({
         }
       );
       if (response.ok) {
+        fetchData();
         setShowUpdateModel(false);
       }
     } catch (error) {
@@ -69,10 +75,13 @@ const UpdateExperience = ({
         <div className="input_form">
           <div className="input_title">
             <label>Title*</label>
-            {/* <Form.Control
+            <Form.Control
               value={exp.role}
-              onChange={(e) => setExp({ ...exp, role: e.target.value })}
-            /> */}
+              onChange={(e) => {
+                setExp({ ...exp, role: e.target.value });
+                // console.log(exp.role);
+              }}
+            />
           </div>
 
           <div className="input_comp_name">
@@ -92,18 +101,18 @@ const UpdateExperience = ({
 
           <div className="input_city">
             <label>Location</label>
-            {/* <Form.Control
+            <Form.Control
               type="text"
               placeholder="Ex: London, United Kingdom"
               value={exp.area}
               onChange={(e) => setExp({ ...exp, area: e.target.value })}
-            /> */}
+            />
           </div>
 
           <h5>learn more</h5>
           <div className="input_Company_name ">
             <label>Company name </label>
-            {/* <Form.Control
+            <Form.Control
               placeholder="Ex: Microsoft"
               value={exp.company}
               onChange={(e) =>
@@ -112,7 +121,7 @@ const UpdateExperience = ({
                   company: e.target.value,
                 })
               }
-            /> */}
+            />
           </div>
 
           <Form.Check
@@ -125,9 +134,8 @@ const UpdateExperience = ({
               <div>
                 <label>Start date*</label>
                 <Form>
-                  {/* <DatePicker
-                    selected={exp.startDate}
-                    value={exp.startDate}
+                  <DatePicker
+                    value={format(parseISO(exp.startDate), "MMMM do yyyy")}
                     onChange={(date) =>
                       setExp({
                         ...exp,
@@ -137,15 +145,14 @@ const UpdateExperience = ({
                     isClearable
                     showYearDropdown
                     scrollableMonthYearDropdown
-                  /> */}
+                  />
                 </Form>
               </div>
               <div>
                 <label>End date*</label>
                 <Form>
-                  {/* <DatePicker
-                    selected={exp.endDate}
-                    value={exp.endDate}
+                  <DatePicker
+                    value={format(parseISO(exp.endDate), "MMMM do yyyy")}
                     onChange={(date) =>
                       setExp({
                         ...exp,
@@ -155,7 +162,7 @@ const UpdateExperience = ({
                     isClearable
                     showYearDropdown
                     scrollableMonthYearDropdown
-                  /> */}
+                  />
                 </Form>
               </div>
             </div>
@@ -184,7 +191,7 @@ const UpdateExperience = ({
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
-              {/* <Form.Control
+              <Form.Control
                 class="input_description_text"
                 as="textarea"
                 rows={3}
@@ -195,7 +202,7 @@ const UpdateExperience = ({
                     description: e.target.value,
                   })
                 }
-              /> */}
+              />
             </Form.Group>
           </div>
 
@@ -222,12 +229,12 @@ const UpdateExperience = ({
         </div>
       </Modal.Body>
       <Modal.Footer className="footer_button">
-        <Button onClick={() => submitUpdateForm()}>
-          <h5> Save </h5>
-        </Button>
-
         <Button onClick={() => deleteEx()}>
           <h5> Delete</h5>
+        </Button>
+
+        <Button onClick={() => submitUpdateForm()}>
+          <h5> Save </h5>
         </Button>
       </Modal.Footer>
     </Modal>
