@@ -447,11 +447,14 @@ export default function Experience({ authorized }) {
 
             <div className="experience_list_txt">
               <h5>{experience.role}</h5>
-              <p>{experience.company}</p>
-              <p>{format(parseISO(experience.startDate), "MMMM do yyyy")}</p>
-              <p>{format(parseISO(experience.endDate), "MMMM do yyyy")}</p>
-              <p>{experience.description}</p>
-              <p>{experience.area}</p>
+              <p className="text-dark">{experience.company}</p>
+              <p className="text-muted">
+                {format(parseISO(experience.startDate), "MMM yyyy")} -{" "}
+                {format(parseISO(experience.endDate), "MMM yyyy")}
+              </p>
+              <p>
+                <small>{experience.description}</small>
+              </p>
             </div>
             <hr />
           </div>
