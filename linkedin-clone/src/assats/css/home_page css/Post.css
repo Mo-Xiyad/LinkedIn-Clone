@@ -48,6 +48,8 @@
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 5px;
+  align-items: flex-start;
+
 }
 
 .img_container {
